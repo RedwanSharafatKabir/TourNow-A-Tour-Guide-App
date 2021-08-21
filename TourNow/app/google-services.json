@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "961920195733",
+    "project_id": "tour-now-94134",
+    "storage_bucket": "tour-now-94134.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961920195733:android:895366fa31ec3e16b14f9c",
+        "android_client_info": {
+          "package_name": "com.example.tournow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "961920195733-mdj54lp6ipca5sfrh1ju3gq4bm7lh2pq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tournow",
+            "certificate_hash": "89684ac75846434ab782ba2a6b96533dbcc5fbb7"
+          }
+        },
+        {
+          "client_id": "961920195733-hjs83sk4gttp07bonl2qs21vma5gntv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO1kuBs9Y_Hd57TmLHNEx7RmyRcH7fNTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "961920195733-hjs83sk4gttp07bonl2qs21vma5gntv3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

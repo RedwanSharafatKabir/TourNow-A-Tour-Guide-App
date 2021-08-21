@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.SettingFragment"
+    android:background="#fff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/theme_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:padding="18dp"
+                android:text="@string/text_setting"
+                android:textColor="#000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/upperLayoutId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/text_setting"
+                android:weightSum="10"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/darkId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="@string/text_dark"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="left"
+                    android:layout_gravity="center"/>
+
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:id="@+id/darkSwitchId"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lowerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/upperLayoutId"
+                android:weightSum="10"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/lightId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="@string/text_light"
+                    android:textSize="20sp"
+                    android:textColor="#000"
+                    android:fontFamily="serif-monospace"
+                    android:gravity="left"
+                    android:layout_gravity="center"/>
+
+                <Switch
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:id="@+id/lightSwitchId"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000"
+                android:id="@+id/lowerLayout2"
+                android:layout_below="@+id/lowerLayout"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/changeLangBtnId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lowerLayout2"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_background"
+                android:text="@string/lang_change"
+                android:textSize="16sp"
+                android:textColor="#fff"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingRight="15dp"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/ic_baseline_edit_24"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

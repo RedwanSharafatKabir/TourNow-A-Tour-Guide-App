@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/btn_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/button_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/button_click_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/close_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/create_post_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/discard_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/logo_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/post_publish_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/profile_popup_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_biman_ticket.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_biman_ticket_webview.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_bus_ticket.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_bus_ticket_webview.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_dhaka_division.xml" value="0.20615384615384616" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_hotel_buking.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_hotel_buking_webview.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_launch_ticket.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_launch_ticket_webview.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_login.xml" value="0.2037037037037037" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_network_error.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_register.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_train_ticket.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_train_ticket_webview.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/app_bar_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/content_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/create_post_custom_adapter.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/forgot_passwprd_reset.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_about.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_advice.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_blog.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_budget.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_buking.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_division.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_newsfeed.xml" value="0.22" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_ofline.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_share.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_travel.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/nav_header_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/newsfeed_custom_adapter.xml" value="0.22" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/profile_popup.xml" value="0.22" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/settings_fragment.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/update_password.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

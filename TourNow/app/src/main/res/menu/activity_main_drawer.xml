@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home"/>
+        <item
+            android:id="@+id/nav_travel"
+            android:icon="@drawable/ic_menu_type"
+            android:title="@string/menu_travel" />
+        <item
+            android:id="@+id/nav_travel_division"
+            android:icon="@drawable/ic_menu_division"
+            android:title="@string/menu_travel_division" />
+        <item
+            android:id="@+id/nav_travel_buking"
+            android:icon="@drawable/ic_menu_buking"
+            android:title="@string/menu_travel_buking" />
+
+        <item
+            android:id="@+id/nav_budget_calculate"
+            android:icon="@drawable/ic_baseline_budget"
+            android:title="@string/menu_budget_calculate" />
+        <item
+            android:id="@+id/nav_newsfeed"
+            android:icon="@drawable/ic_baseline_newsfeed"
+            android:title="@string/menu_newsfeed" />
+
+        <item
+            android:id="@+id/nav_ofline_data"
+            android:icon="@drawable/ic_menu_ofline_data"
+            android:title="@string/menu_offline_data" />
+        <item
+            android:id="@+id/nav_travel_blog"
+            android:icon="@drawable/ic_menu_blog"
+            android:title="@string/menu_travel_blog" />
+        <item
+            android:id="@+id/nav_travel_advice"
+            android:icon="@drawable/ic_menu_advice"
+            android:title="@string/menu_travel_advice" />
+        <item
+            android:id="@+id/nav_tarvel_share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="@string/menu_travel_share" />
+        <item
+            android:id="@+id/nav_tarvel_setting"
+            android:icon="@drawable/ic_menu_setting"
+            android:title="@string/menu_travel_setting" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_baseline_about"
+            android:title="@string/menu_about" />
+    </group>
+
+</menu>

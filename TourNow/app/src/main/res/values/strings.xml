@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Tour Now</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="drawerOpen">drawerOpen</string>
+    <string name="drawerClose">drawerClose</string>
+
+    <string name="signuphere">Creat a new account <u>SignUp</u></string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="phone">Phone</string>
+    <string name="signup">Signup</string>
+    <string name="fullname">Fullname</string>
+    <string name="email">Email</string>
+    <string name="c_password">Confirm Password</string>
+    <string name="loginhere">Already have an account? <u>Login</u></string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="forgotpasswordreset">Enter email</string>
+    <string name="update_password">Update Password</string>
+    <string name="new_password">Enter new password</string>
+    <string name="c_new_password">Confirm new password</string>
+    <string name="settings">Settings</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="logout">Log Out</string>
+
+    <string name="nav_title">Tour Now</string>
+    <string name="write_post_title"> Create your post</string>
+    <string name="discard_post">Discard</string>
+    <string name="publish_post">Publish</string>
+    <string name="comment_post">Comment</string>
+
+    <string name="text_setting">App Theme</string>
+    <string name="text_dark">Dark Mode</string>
+    <string name="text_light">Light Mode</string>
+    <string name="text_english">English</string>
+    <string name="text_bangla">বাংলা</string>
+    <string name="lang_change">\u0020Change Language</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_travel">Travel Places</string>
+    <string name="menu_travel_division">Divisions</string>
+    <string name="menu_travel_buking">Hotel/Ticket Booking</string>
+    <string name="menu_offline_data">Offline Info</string>
+    <string name="menu_travel_blog">Travel Blog</string>
+    <string name="menu_travel_advice">Travel Advice</string>
+    <string name="menu_travel_share">Share This App</string>
+    <string name="menu_travel_setting">Settings</string>
+    <string name="menu_budget_calculate">Budget Calculation</string>
+    <string name="menu_newsfeed">Newsfeed</string>
+    <string name="menu_about">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="travel_binodon">Park</string>
+    <string name="travel_bonanchol">Forests</string>
+    <string name="travel_pahar">Hill Tracts</string>
+    <string name="travel_somudro">River/Sea Beaches</string>
+    <string name="travel_oitihasik">Historical Place</string>
+    <string name="travel_jadughor">Museum</string>
+
+    <string name="division_dhaka">Dhaka</string>
+    <string name="dhaka_division">Dhaka Division</string>
+    <string name="kisorgonj">Kishoreganj</string>
+    <string name="gajipur">Gazipur</string>
+    <string name="gopalgonj">Gopalganj</string>
+    <string name="tangail">Tangail</string>
+    <string name="dhaka">Dhaka</string>
+    <string name="norsingdi">Narsingdi</string>
+    <string name="narayongonj">Narayanganj</string>
+    <string name="faridpur">Faridpur</string>
+    <string name="madaripur">Madaripur</string>
+    <string name="manikgonj">Manikganj</string>
+    <string name="munsigonj">Munsiganj</string>
+    <string name="rajbari">Rajbari</string>
+    <string name="soriyotpur">Shariatpur</string>
+
+    <string name="division_chottogram">Chittagong</string>
+    <string name="division_khulna">Khulna</string>
+    <string name="division_barishal">Barisal</string>
+    <string name="division_rajshahi">Rajshahi</string>
+    <string name="division_shylet">Sylhet</string>
+    <string name="division_rangpur">Rangpur</string>
+    <string name="division_mymenshingh">Mymensingh</string>
+
+    <string name="buking_hotel">Book your resort/hotel from home</string>
+    <string name="buked_hotel">Choose your hotel here</string>
+    <string name="buking_ticket">Buy tickets from home</string>
+    <string name="buked_ticket">Buy tickets here</string>
+
+    <string name="hotel">Hotel</string>
+    <string name="buking.com">Booking.com</string>
+    <string name="hotelbuking">Hotel Booking</string>
+
+
+    <string name="train">Train</string>
+    <string name="bdtrain">Bangladesh Railway</string>
+    <string name="bus">Bus</string>
+    <string name="bdtikit">Bd Ticket</string>
+    <string name="sohoj">Shohoj</string>
+    <string name="busbd">Bus Bd</string>
+    <string name="launch">Launch</string>
+    <string name="biman">Airplane</string>
+    <string name="bimanbangladesh">Biman Bangladesh Airlines</string>
+    <string name="gozayaan">Go Zayaan</string>
+    <string name="flightexpart">Flight Expert</string>
+
+</resources>

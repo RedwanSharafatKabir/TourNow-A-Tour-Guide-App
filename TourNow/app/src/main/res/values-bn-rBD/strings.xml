@@ -30,6 +30,7 @@
 
     <string name="nav_title">Tour Now</string>
     <string name="write_post_title"> পোস্ট করুন</string>
+    <string name="re_write_post_title"> ছবি যুক্ত হয়েছে</string>
     <string name="discard_post">ডিসকার্ড</string>
     <string name="publish_post">পাবলিশ</string>
     <string name="comment_post">কমেন্ট</string>

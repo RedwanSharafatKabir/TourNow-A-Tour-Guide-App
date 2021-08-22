@@ -29,19 +29,18 @@
 
                 <androidx.appcompat.widget.Toolbar
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="60dp"
                     android:id="@+id/toolBarID"
                     android:outlineAmbientShadowColor="#ffffff"
                     android:outlineSpotShadowColor="#ffffff"
                     android:theme="@style/Animation.Design.BottomSheetDialog"/>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/fab"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center|end"
-                    android:layout_marginRight="@dimen/fab_margin"
-                    app:srcCompat="@drawable/ic_person"/>
+                    android:layout_marginRight="@dimen/fab_margin"/>
 
                 <TextView
                     android:id="@+id/setToolBarTextId"

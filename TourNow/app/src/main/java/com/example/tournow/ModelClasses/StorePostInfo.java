@@ -6,12 +6,16 @@ public class StorePostInfo {
     String name;
     String post;
     int likeNumbers;
+    String imageUrl;
+    String videoUrl;
 
-    public StorePostInfo(String userPhone, String name, String post, int likeNumbers) {
+    public StorePostInfo(String userPhone, String name, String post, int likeNumbers, String imageUrl, String videoUrl) {
         this.userPhone = userPhone;
         this.name = name;
         this.post = post;
         this.likeNumbers = likeNumbers;
+        this.imageUrl = imageUrl;
+        this.videoUrl = videoUrl;
     }
 
     public StorePostInfo() {
@@ -47,5 +51,21 @@ public class StorePostInfo {
 
     public void setLikeNumbers(int likeNumbers) {
         this.likeNumbers = likeNumbers;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getVideoUrl() {
+        return videoUrl;
+    }
+
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 }

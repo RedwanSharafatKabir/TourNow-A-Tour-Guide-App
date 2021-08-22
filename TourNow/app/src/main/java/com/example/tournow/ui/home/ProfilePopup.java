@@ -2,13 +2,16 @@ package com.example.tournow.ui.home;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -17,26 +20,39 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 import com.example.tournow.LoginActivity;
 import com.example.tournow.MainActivity;
+import com.example.tournow.ModelClasses.StoreUserImage;
 import com.example.tournow.R;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ProfilePopup extends AppCompatDialogFragment {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class ProfilePopup extends AppCompatDialogFragment implements View.OnClickListener{
 
     ProgressBar progressBar;
     View views;
@@ -44,9 +60,14 @@ public class ProfilePopup extends AppCompatDialogFragment {
     Button buttonlogout, buttonpasswordchange;
     FirebaseAuth firebaseAuth;
     FirebaseUser user;
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference, imageReference;
     FirebaseDatabase firebaseDatabase;
     LayoutInflater inflater;
+    CircleImageView profileImage;
+    String profileImageUrl, userPhone, image_name;
+    StorageReference storageReference;
+    ProgressDialog dialog;
+    Uri uriProfileImage;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -55,8 +76,10 @@ public class ProfilePopup extends AppCompatDialogFragment {
         views = inflater.inflate(R.layout.profile_popup, null);
         builder.setView(views).setCancelable(false);
 
+        dialog = new ProgressDialog(getActivity());
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
+        userPhone = user.getDisplayName();
 
         progressBar = views.findViewById(R.id.profileProgressBarId);
         txtclose =(TextView) views.findViewById(R.id.txtclose);
@@ -64,6 +87,10 @@ public class ProfilePopup extends AppCompatDialogFragment {
         profileemail = (TextView) views.findViewById(R.id.pro_email);
         buttonlogout = (Button) views.findViewById(R.id.log_out);
         buttonpasswordchange = (Button) views.findViewById(R.id.change_password);
+        profileImage = views.findViewById(R.id.profile_image);
+        profileImage.setOnClickListener(this);
+
+        imageReference = FirebaseDatabase.getInstance().getReference("User Avatar");
 
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +117,22 @@ public class ProfilePopup extends AppCompatDialogFragment {
 
                 profilename.setText(name);
                 profileemail.setText(email);
-                progressBar.setVisibility(View.GONE);
+
+                imageReference.child(userPhone).child("avatar").addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        try {
+                            Picasso.get().load(snapshot.getValue().toString()).into(profileImage);
+                            progressBar.setVisibility(View.GONE);
+                        } catch (Exception e){
+                            Log.i("Error", e.getMessage());
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {}
+                });
             }
 
             @Override
@@ -208,5 +250,103 @@ public class ProfilePopup extends AppCompatDialogFragment {
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.profile_image){
+            someActivityResultLauncher.launch("image/*");
+        }
+    }
+
+    ActivityResultLauncher<String> someActivityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.GetContent(), new ActivityResultCallback<Uri>() {
+                @Override
+                public void onActivityResult(Uri result) {
+                    if (result != null) {
+                        profileImage.setImageURI(result);
+                        uriProfileImage = result;
+                        uploadImageToFirebase();
+                    }
+                }
+            });
+
+    private void uploadImageToFirebase(){
+        dialog.setMessage("Uploading.....");
+        dialog.show();
+
+        image_name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+        storageReference = FirebaseStorage.getInstance()
+                .getReference("profile images/" + image_name + ".jpg");
+
+        if(uriProfileImage!=null){
+            storageReference.putFile(uriProfileImage).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    storageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            profileImageUrl = uri.toString();
+                            saveUserInfo();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            dialog.dismiss();
+                            Toast.makeText(getActivity(), "Could not upload", Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {}
+            });
+        }
+    }
+
+    private void saveUserInfo(){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+        if(user!=null && profileImageUrl!=null){
+            UserProfileChangeRequest profile;
+            profile = new UserProfileChangeRequest.Builder().setPhotoUri(Uri.parse(profileImageUrl)).build();
+
+            user.updateProfile(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {}
+            });
+
+            storeImageMethod(profileImageUrl);
+            dialog.dismiss();
+            Toast.makeText(getActivity(), "Profile updated", Toast.LENGTH_SHORT).show();
+
+            setImageInMainActivity();
+        }
+    }
+
+    private void storeImageMethod(String profileImageUrl){
+        StoreUserImage storeUserImage = new StoreUserImage(profileImageUrl);
+        imageReference.child(userPhone).setValue(storeUserImage);
+    }
+
+    private void setImageInMainActivity(){
+        try{
+            imageReference.child(userPhone).child("avatar").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    try{
+                        Picasso.get().load(snapshot.getValue().toString()).into(((MainActivity) getActivity()).fab);
+                    } catch (Exception e){
+                        Log.i("Error ", "Image not founr");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {}
+            });
+
+        } catch (Exception e){
+            Log.i("Error ", "Image not founr");
+        }
     }
 }

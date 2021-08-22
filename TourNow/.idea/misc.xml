@@ -9,7 +9,11 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/close_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/create_post_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/discard_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_attach_image.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_attach_video.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_delete_sweep_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_person.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/logo_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/post_publish_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/profile_popup_background.xml" value="0.22552083333333334" />
@@ -50,6 +54,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/settings_fragment.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/update_password.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/menu/menu_layout.xml" value="0.209375" />
       </map>
     </option>
   </component>

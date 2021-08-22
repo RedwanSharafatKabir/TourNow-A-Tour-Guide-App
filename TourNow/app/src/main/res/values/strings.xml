@@ -30,6 +30,7 @@
 
     <string name="nav_title">Tour Now</string>
     <string name="write_post_title"> Create your post</string>
+    <string name="re_write_post_title"> Image added</string>
     <string name="discard_post">Discard</string>
     <string name="publish_post">Publish</string>
     <string name="comment_post">Comment</string>

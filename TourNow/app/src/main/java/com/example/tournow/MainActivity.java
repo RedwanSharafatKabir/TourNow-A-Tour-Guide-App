@@ -24,6 +24,14 @@ import com.example.tournow.ui.home.SettingFragment;
 import com.example.tournow.ui.home.TravelFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -39,9 +47,11 @@ import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.util.Locale;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    String language = "";
+    String language = "", userPhone;
     DrawerLayout drawerLayout;
     public NavigationView navigationView;
     Toolbar toolbar;
@@ -51,6 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     FragmentTransaction feedbackTransaction;
     public TextView toolBarText;
     public Menu menu;
+    DatabaseReference databaseReference;
+    public CircleImageView fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +83,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
         getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+        userPhone = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
+        databaseReference = FirebaseDatabase.getInstance().getReference("User Avatar");
 
         navigationView = findViewById(R.id.navigationViewID);
         navigationView.setItemIconTintList(null);
@@ -108,7 +123,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         hView = navigationView.getHeaderView(0);
 
         //profile view with fab
-        FloatingActionButton fab = findViewById(R.id.fab);
+        fab = findViewById(R.id.fab);
+
+        try{
+            databaseReference.child(userPhone).child("avatar").addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    try{
+                        Picasso.get().load(snapshot.getValue().toString()).into(fab);
+                    } catch (Exception e){
+                        Log.i("Error ", "Image not founr");
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {}
+            });
+
+        } catch (Exception e){
+            Log.i("Error ", "Image not founr");
+        }
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

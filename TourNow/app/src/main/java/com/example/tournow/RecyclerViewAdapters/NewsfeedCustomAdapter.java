@@ -175,42 +175,99 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
         holder.postImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(context, ParticularPostActivity.class);
-                it.putExtra("postOwnerName_key", postUserName);
-                it.putExtra("postDescription_key", postDescription);
-                it.putExtra("postImageUrl_key", imageUrl);
-                it.putExtra("postOwnerPhone_key", postUserPhone);
-                it.putExtra("postLikes_key", String.valueOf(count));
-                it.putExtra("postVideoUrl_key", videoUrl);
-                context.startActivity(it);
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot item : dataSnapshot.getChildren()) {
+                            for (DataSnapshot snapshot : item.getChildren()) {
+
+                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
+                                    String testKey = snapshot.getKey();
+
+                                    Intent it = new Intent(context, ParticularPostActivity.class);
+                                    it.putExtra("postOwnerName_key", postUserName);
+                                    it.putExtra("postDescription_key", postDescription);
+                                    it.putExtra("postImageUrl_key", imageUrl);
+                                    it.putExtra("postOwnerPhone_key", postUserPhone);
+                                    it.putExtra("postLikes_key", String.valueOf(count));
+                                    it.putExtra("postVideoUrl_key", videoUrl);
+                                    it.putExtra("postIdentity_key", testKey);
+                                    context.startActivity(it);
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {}
+                });
             }
         });
 
         holder.postText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(context, ParticularPostActivity.class);
-                it.putExtra("postOwnerName_key", postUserName);
-                it.putExtra("postDescription_key", postDescription);
-                it.putExtra("postImageUrl_key", imageUrl);
-                it.putExtra("postOwnerPhone_key", postUserPhone);
-                it.putExtra("postLikes_key", String.valueOf(count));
-                it.putExtra("postVideoUrl_key", videoUrl);
-                context.startActivity(it);
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot item : dataSnapshot.getChildren()) {
+                            for (DataSnapshot snapshot : item.getChildren()) {
+
+                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
+                                    String testKey = snapshot.getKey();
+
+                                    Intent it = new Intent(context, ParticularPostActivity.class);
+                                    it.putExtra("postOwnerName_key", postUserName);
+                                    it.putExtra("postDescription_key", postDescription);
+                                    it.putExtra("postImageUrl_key", imageUrl);
+                                    it.putExtra("postOwnerPhone_key", postUserPhone);
+                                    it.putExtra("postLikes_key", String.valueOf(count));
+                                    it.putExtra("postVideoUrl_key", videoUrl);
+                                    it.putExtra("postIdentity_key", testKey);
+                                    context.startActivity(it);
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {}
+                });
             }
         });
 
         holder.commentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent it = new Intent(context, ParticularPostActivity.class);
-                it.putExtra("postOwnerName_key", postUserName);
-                it.putExtra("postDescription_key", postDescription);
-                it.putExtra("postImageUrl_key", imageUrl);
-                it.putExtra("postOwnerPhone_key", postUserPhone);
-                it.putExtra("postLikes_key", String.valueOf(count));
-                it.putExtra("postVideoUrl_key", videoUrl);
-                context.startActivity(it);
+                databaseReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+
+                        for (DataSnapshot item : dataSnapshot.getChildren()) {
+                            for (DataSnapshot snapshot : item.getChildren()) {
+
+                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
+                                    String testKey = snapshot.getKey();
+
+                                    Intent it = new Intent(context, ParticularPostActivity.class);
+                                    it.putExtra("postOwnerName_key", postUserName);
+                                    it.putExtra("postDescription_key", postDescription);
+                                    it.putExtra("postImageUrl_key", imageUrl);
+                                    it.putExtra("postOwnerPhone_key", postUserPhone);
+                                    it.putExtra("postLikes_key", String.valueOf(count));
+                                    it.putExtra("postVideoUrl_key", videoUrl);
+                                    it.putExtra("postIdentity_key", testKey);
+                                    context.startActivity(it);
+                                }
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {}
+                });
             }
         });
     }

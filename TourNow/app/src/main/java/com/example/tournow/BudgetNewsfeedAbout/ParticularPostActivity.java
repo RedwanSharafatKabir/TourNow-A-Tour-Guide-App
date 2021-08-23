@@ -48,7 +48,8 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
     ArrayList<StoreCommentData> storeCommentDataArrayList;
     TextView nametext, postText, likedPeople;
     ImageView likeBtn, postImage, deletePost, backPage, sendComment;
-    String postUserName, postDescription, postLikesCount, postUserPhone, postImageUrl, postVideoUrl, userPhone;
+    String postUserName, postDescription, postLikesCount, postUserPhone;
+    String postImageUrl, postVideoUrl, userPhone, postTokenKey;
     DatabaseReference databaseReference1, databaseReference2, databaseReference3;
 
     @Override
@@ -80,6 +81,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
         postUserPhone = it.getStringExtra("postOwnerPhone_key");
         postLikesCount = it.getStringExtra("postLikes_key");
         postVideoUrl = it.getStringExtra("postVideoUrl_key");
+        postTokenKey = it.getStringExtra("postIdentity_key");
         count = Integer.parseInt(postLikesCount);
 
         if(postImageUrl.equals("No_Image")){
@@ -126,32 +128,37 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
     }
 
     private void showCommentData(){
-        databaseReference3.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                storeCommentDataArrayList.clear();
+        try {
+            databaseReference3.child(postUserPhone).child(postTokenKey).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    storeCommentDataArrayList.clear();
 
-                for (DataSnapshot item : dataSnapshot.getChildren()) {
-                    for (DataSnapshot snapshot : item.getChildren()) {
-
-                        StoreCommentData storeCommentData = snapshot.getValue(StoreCommentData.class);
-                        storeCommentDataArrayList.add(storeCommentData);
+                    for (DataSnapshot items : dataSnapshot.getChildren()) {
+                        for (DataSnapshot snapshots : items.getChildren()) {
+                            StoreCommentData storeCommentData = snapshots.getValue(StoreCommentData.class);
+                            storeCommentDataArrayList.add(storeCommentData);
+                        }
                     }
+
+                    postCommentAdapter = new PostCommentAdapter(ParticularPostActivity.this, storeCommentDataArrayList);
+                    recyclerView.setAdapter(postCommentAdapter);
+                    postCommentAdapter.notifyDataSetChanged();
+                    recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
+
+                    progressBar.setVisibility(View.GONE);
                 }
 
-                postCommentAdapter = new PostCommentAdapter(ParticularPostActivity.this, storeCommentDataArrayList);
-                recyclerView.setAdapter(postCommentAdapter);
-                postCommentAdapter.notifyDataSetChanged();
-                recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    progressBar.setVisibility(View.GONE);
+                }
+            });
 
-                progressBar.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                progressBar.setVisibility(View.GONE);
-            }
-        });
+        } catch (Exception e){
+            progressBar.setVisibility(View.GONE);
+            Log.i("Error ", e.getMessage());
+        }
 
         refresh(1000);
     }
@@ -244,7 +251,6 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
                         for (DataSnapshot item : dataSnapshot.getChildren()) {
                             for (DataSnapshot snapshot : item.getChildren()) {
                                 String temp = snapshot.child("post").getValue().toString();
-                                String postKey = snapshot.getKey();
 
                                 if(postDescription.equals(temp)){
                                     DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Visitor").child(userPhone);
@@ -252,7 +258,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             String commenterName = snapshot.getValue().toString();
-                                            storeCommentMethod(postUserPhone, postKey, userPhone, commenterName, commentText);
+                                            storeCommentMethod(postUserPhone, postTokenKey, userPhone, commenterName, commentText);
                                         }
 
                                         @Override
@@ -274,7 +280,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
 
     private void storeCommentMethod(String postUserPhone, String postKey, String commenterPhone, String commenterName, String commentText){
         StoreCommentData storeCommentData = new StoreCommentData(commenterPhone, commenterName, commentText);
-        databaseReference3.child(postUserPhone).child(postKey).setValue(storeCommentData);
+        databaseReference3.child(postUserPhone).child(postKey).child(userPhone).child(commentText).setValue(storeCommentData);
         writeComment.setText("");
     }
 

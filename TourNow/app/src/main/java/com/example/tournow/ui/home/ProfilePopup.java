@@ -47,6 +47,9 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -231,6 +234,8 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
             public void onClick(DialogInterface dialog, int which) {
                 if(user!=null){
                     buttonlogout.setBackgroundResource(R.drawable.button_click_background);
+                    setNullDataMethod("");
+
                     getActivity().finish();
                     firebaseAuth.getInstance().signOut();
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
@@ -250,6 +255,20 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+
+    private void setNullDataMethod(String passedString){
+        try {
+            FileOutputStream fileOutputStream = getActivity().openFileOutput("User_Info.txt", Context.MODE_PRIVATE);
+            fileOutputStream.write(passedString.getBytes());
+            fileOutputStream.close();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

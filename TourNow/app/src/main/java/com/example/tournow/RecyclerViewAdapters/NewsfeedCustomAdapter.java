@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tournow.BudgetNewsfeedAbout.ParticularPostActivity;
 import com.example.tournow.LoginActivity;
 import com.example.tournow.ModelClasses.StoreLikedPost;
 import com.example.tournow.ModelClasses.StorePostInfo;
@@ -73,7 +74,9 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
             holder.postImage.setVisibility(View.VISIBLE);
             Picasso.get().load(imageUrl).into(holder.postImage);
 
-        } else if(imageUrl.equals("No_Image")){
+        }
+
+        else if(imageUrl.equals("No_Image")){
             holder.postImage.setVisibility(View.GONE);
         }
 
@@ -152,8 +155,12 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
                                 String temp = snapshot.child("post").getValue().toString();
 
                                 if(postDescription.equals(temp)){
-                                    deletePostMethod(userPhone, snapshot.getKey());
-                                    break;
+                                    if(postUserPhone.equals(userPhone)) {
+                                        deletePostMethod(userPhone, snapshot.getKey());
+                                        break;
+                                    } else {
+                                        Toast.makeText(context, "You are not owner", Toast.LENGTH_SHORT).show();
+                                    }
                                 }
                             }
                         }
@@ -162,6 +169,48 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
                     @Override
                     public void onCancelled(DatabaseError databaseError) {}
                 });
+            }
+        });
+
+        holder.postImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(context, ParticularPostActivity.class);
+                it.putExtra("postOwnerName_key", postUserName);
+                it.putExtra("postDescription_key", postDescription);
+                it.putExtra("postImageUrl_key", imageUrl);
+                it.putExtra("postOwnerPhone_key", postUserPhone);
+                it.putExtra("postLikes_key", String.valueOf(count));
+                it.putExtra("postVideoUrl_key", videoUrl);
+                context.startActivity(it);
+            }
+        });
+
+        holder.postText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(context, ParticularPostActivity.class);
+                it.putExtra("postOwnerName_key", postUserName);
+                it.putExtra("postDescription_key", postDescription);
+                it.putExtra("postImageUrl_key", imageUrl);
+                it.putExtra("postOwnerPhone_key", postUserPhone);
+                it.putExtra("postLikes_key", String.valueOf(count));
+                it.putExtra("postVideoUrl_key", videoUrl);
+                context.startActivity(it);
+            }
+        });
+
+        holder.commentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(context, ParticularPostActivity.class);
+                it.putExtra("postOwnerName_key", postUserName);
+                it.putExtra("postDescription_key", postDescription);
+                it.putExtra("postImageUrl_key", imageUrl);
+                it.putExtra("postOwnerPhone_key", postUserPhone);
+                it.putExtra("postLikes_key", String.valueOf(count));
+                it.putExtra("postVideoUrl_key", videoUrl);
+                context.startActivity(it);
             }
         });
     }
@@ -220,13 +269,14 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            nametext = itemView.findViewById(R.id.publisherNameId);
-            postText = itemView.findViewById(R.id.publishedPostId);
 
-            deletePost = itemView.findViewById(R.id.deletePostId);
-            postImage = itemView.findViewById(R.id.postImageId);
 //            postOwnerImage = itemView.findViewById(R.id.postOwnerImageId);
 //            postOwnerImage.setVisibility(View.GONE);
+
+            nametext = itemView.findViewById(R.id.publisherNameId);
+            postText = itemView.findViewById(R.id.publishedPostId);
+            deletePost = itemView.findViewById(R.id.deletePostId);
+            postImage = itemView.findViewById(R.id.postImageId);
 
             commentBtn = itemView.findViewById(R.id.commentBtnId);
             likedPeople = itemView.findViewById(R.id.likedPeopleId);

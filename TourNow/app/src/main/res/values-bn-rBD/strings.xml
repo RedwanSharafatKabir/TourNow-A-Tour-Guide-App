@@ -34,6 +34,8 @@
     <string name="discard_post">ডিসকার্ড</string>
     <string name="publish_post">পাবলিশ</string>
     <string name="comment_post">কমেন্ট</string>
+    <string name="all_comments">কমেন্টস</string>
+    <string name="type_comment">কমেন্ট করুন</string>
 
     <string name="text_setting">থিম পরিবর্তন করুন</string>
     <string name="text_dark">ডার্ক মোড</string>

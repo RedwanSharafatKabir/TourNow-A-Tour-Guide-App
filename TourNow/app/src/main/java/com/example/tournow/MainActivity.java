@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ActionBarDrawerToggle actionBarDrawerToggle;
     View hView;
     Fragment fragment;
-    FragmentTransaction feedbackTransaction;
+    FragmentTransaction fragmentTransaction;
     public TextView toolBarText;
     public Menu menu;
     DatabaseReference databaseReference;
@@ -151,6 +151,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 profilePopup.show(getSupportFragmentManager(), "Sample dialog");
             }
         });
+
+        try {
+            switch (getIntent().getStringExtra("EXTRA")) {
+                case "openChatFragment":
+                    fragment = new NewsfeedFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentID, fragment);
+                    fragmentTransaction.commit();
+                    break;
+            }
+        } catch (Exception e){
+            Log.i("Error ", e.getMessage());
+        }
     }
 
     @Override
@@ -162,73 +175,73 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 toolBarText.setText(getResources().getText(R.string.menu_home));
                 fragment = new HomeFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_travel:
                 toolBarText.setText(getResources().getText(R.string.menu_travel));
                 fragment = new TravelFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_travel_division:
                 toolBarText.setText(getResources().getText(R.string.menu_travel_division));
                 fragment = new DivisionFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_travel_buking:
                 toolBarText.setText(getResources().getText(R.string.menu_travel_buking));
                 fragment = new BukingFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_budget_calculate:
                 toolBarText.setText(getResources().getText(R.string.menu_budget_calculate));
                 fragment = new BudgetCalculateFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_newsfeed:
                 toolBarText.setText(getResources().getText(R.string.menu_newsfeed));
                 fragment = new NewsfeedFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_ofline_data:
                 toolBarText.setText(getResources().getText(R.string.menu_offline_data));
                 fragment = new OflineFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_travel_blog:
                 toolBarText.setText(getResources().getText(R.string.menu_travel_blog));
                 fragment = new BlogFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_travel_advice:
                 toolBarText.setText(getResources().getText(R.string.menu_travel_advice));
                 fragment = new AdviceFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_tarvel_share:
@@ -238,17 +251,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_tarvel_setting:
                 toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
                 fragment = new SettingFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
 
             case R.id.nav_about:
                 toolBarText.setText(getResources().getText(R.string.menu_about));
                 fragment = new AboutFragment();
-                feedbackTransaction = getSupportFragmentManager().beginTransaction();
-                feedbackTransaction.replace(R.id.fragmentID, fragment);
-                feedbackTransaction.commit();
+                fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragmentID, fragment);
+                fragmentTransaction.commit();
                 break;
         }
 

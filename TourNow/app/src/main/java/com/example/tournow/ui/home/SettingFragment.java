@@ -59,6 +59,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
 
         darkSwitch = views.findViewById(R.id.darkSwitchId);
         lightSwitch = views.findViewById(R.id.lightSwitchId);
+        lightSwitch.setChecked(true);
 
         changeLangBtn = views.findViewById(R.id.changeLangBtnId);
         changeLangBtn.setOnClickListener(this);

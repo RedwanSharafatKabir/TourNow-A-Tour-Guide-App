@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/btn_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/budget_edittext.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/button_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/button_click_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/close_background.xml" value="0.22552083333333334" />
@@ -15,8 +16,10 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_delete_sweep_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_today_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_person.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/logo_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/person_shape.xml" value="0.22205128205128205" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/post_publish_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/profile_popup_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_biman_ticket.xml" value="0.209375" />
@@ -36,6 +39,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_train_ticket.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_train_ticket_webview.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/app_bar_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/budget_calculate_spinner_adapter.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/comments_custom_adapter.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/content_main.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/create_post_custom_adapter.xml" value="0.209375" />
@@ -43,7 +47,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_about.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_advice.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_blog.xml" value="0.209375" />
-        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_budget.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_budget.xml" value="0.25" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_buking.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_division.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/fragment_home.xml" value="0.209375" />

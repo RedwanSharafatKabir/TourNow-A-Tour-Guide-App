@@ -36,6 +36,7 @@
     <string name="comment_post">কমেন্ট</string>
     <string name="all_comments">কমেন্টস</string>
     <string name="type_comment">কমেন্ট করুন</string>
+    <string name="budget_calculator">বাজেট ক্যালকুলেটর</string>
 
     <string name="text_setting">থিম পরিবর্তন করুন</string>
     <string name="text_dark">ডার্ক মোড</string>
@@ -56,6 +57,25 @@
     <string name="menu_budget_calculate">বাজেট ক্যালকুলেট</string>
     <string name="menu_newsfeed">নিউজফিড</string>
     <string name="menu_about">অ্যাবাউট</string>
+    <string name="calculate_btn">ফলাফল</string>
+    <string name="total_person"> মোট কতজন</string>
+    <string name="division_text"> বিভাগ</string>
+    <string name="place_text"> স্থান</string>
+    <string name="transport"> যানবাহন</string>
+    <string name="hotel_text"> হোটেল</string>
+    <string name="total_days"> মোট কতদিন</string>
+
+    <string-array name="division_array">
+        <item>বিভাগ</item>
+        <item>ঢাকা</item>
+        <item>চট্টগ্রাম</item>
+        <item>খুলনা</item>
+        <item>বরিশাল</item>
+        <item>রাজশাহি</item>
+        <item>সিলেট</item>
+        <item>রংপুর</item>
+        <item>ময়মনসিংহ</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

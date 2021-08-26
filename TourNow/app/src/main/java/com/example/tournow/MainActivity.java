@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tournow.BudgetNewsfeedAbout.AboutFragment;
 import com.example.tournow.BudgetNewsfeedAbout.BudgetCalculateFragment;
@@ -67,8 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        try {
         setContentView(R.layout.activity_main);
 
+        checkTheme();
         checkLangTheme();
 
         toolBarText = findViewById(R.id.setToolBarTextId);
@@ -132,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     try{
                         Picasso.get().load(snapshot.getValue().toString()).into(fab);
                     } catch (Exception e){
-                        Log.i("Error ", "Image not founr");
+                        Log.i("Error ", "Image not found");
                     }
                 }
 
@@ -141,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             });
 
         } catch (Exception e){
-            Log.i("Error ", "Image not founr");
+            Log.i("Error ", "Image not found");
         }
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -152,10 +156,29 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
         });
 
+        } catch (Exception e){
+            Log.i("Error ", e.getMessage());
+        }
+
         try {
             switch (getIntent().getStringExtra("EXTRA")) {
-                case "openChatFragment":
+                case "openNewsfeedFragment":
+                    toolBarText.setText(getResources().getText(R.string.menu_newsfeed));
                     fragment = new NewsfeedFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentID, fragment);
+                    fragmentTransaction.commit();
+                    break;
+            }
+        } catch (Exception e){
+            Log.i("Error ", e.getMessage());
+        }
+
+        try {
+            switch (getIntent().getStringExtra("Theme_EXTRA")) {
+                case "openMainActivity":
+                    toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
+                    fragment = new SettingFragment();
                     fragmentTransaction = getSupportFragmentManager().beginTransaction();
                     fragmentTransaction.replace(R.id.fragmentID, fragment);
                     fragmentTransaction.commit();
@@ -315,4 +338,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    private void checkTheme(){
+        try {
+            String recievedMessageTc;
+            FileInputStream fileInputStreamTc = openFileInput("Setting_Theme.txt");
+            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
+            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
+            StringBuffer stringBufferTc = new StringBuffer();
+
+            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
+                stringBufferTc.append(recievedMessageTc);
+            }
+
+            String theme = stringBufferTc.toString();
+
+            if(theme.equals("light")){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            }
+
+            if(theme.equals("dark")){
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            }
+
+        }
+        catch (Exception e) {
+            Log.i("Error ", e.getMessage());
+        }
+    }
 }

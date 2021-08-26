@@ -168,7 +168,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
         if(v.getId()==R.id.backFromCommentsActivityId){
             finish();
             Intent intent = new Intent(ParticularPostActivity.this, MainActivity.class);
-            intent.putExtra("EXTRA", "openChatFragment");
+            intent.putExtra("EXTRA", "openNewsfeedFragment");
             startActivity(intent);
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
         }
@@ -299,7 +299,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
 
                     finish();
                     Intent intent = new Intent(ParticularPostActivity.this, MainActivity.class);
-                    intent.putExtra("EXTRA", "openChatFragment");
+                    intent.putExtra("EXTRA", "openNewsfeedFragment");
                     startActivity(intent);
                     overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 
@@ -337,7 +337,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
     public void onBackPressed() {
         finish();
         Intent intent = new Intent(ParticularPostActivity.this, MainActivity.class);
-        intent.putExtra("EXTRA", "openChatFragment");
+        intent.putExtra("EXTRA", "openNewsfeedFragment");
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
 

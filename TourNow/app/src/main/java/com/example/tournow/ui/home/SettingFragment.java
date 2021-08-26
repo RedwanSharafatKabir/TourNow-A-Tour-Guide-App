@@ -8,6 +8,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -31,6 +32,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tournow.BudgetNewsfeedAbout.ParticularPostActivity;
 import com.example.tournow.MainActivity;
 import com.example.tournow.R;
 
@@ -48,7 +50,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
 
     Switch darkSwitch, lightSwitch;
     View views;
-    String language = "";
+    String language = "", temp;
     TextView changeLangBtn, themeText, darkText, lightText;
 
     @Override
@@ -59,7 +61,52 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
 
         darkSwitch = views.findViewById(R.id.darkSwitchId);
         lightSwitch = views.findViewById(R.id.lightSwitchId);
-        lightSwitch.setChecked(true);
+
+        try {
+            String recievedMessageTc;
+            FileInputStream fileInputStreamTc = getActivity().openFileInput("Setting_Theme.txt");
+            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
+            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
+            StringBuffer stringBufferTc = new StringBuffer();
+
+            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
+                stringBufferTc.append(recievedMessageTc);
+            }
+
+            String theme = stringBufferTc.toString();
+
+            if(theme.equals("light")){
+                lightSwitch.setChecked(true);
+                temp = "light";
+
+                try {
+                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+                    fileOutputStream.write(temp.getBytes());
+                    fileOutputStream.close();
+                }
+                catch (Exception e) {
+                    Log.i("Error ", e.getMessage());
+                }
+            }
+
+            if(theme.equals("dark")){
+                darkSwitch.setChecked(true);
+                temp = "dark";
+
+                try {
+                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+                    fileOutputStream.write(temp.getBytes());
+                    fileOutputStream.close();
+                }
+                catch (Exception e) {
+                    Log.i("Error ", e.getMessage());
+                }
+            }
+
+        }
+        catch (Exception e) {
+            Log.i("Error ", e.getMessage());
+        }
 
         changeLangBtn = views.findViewById(R.id.changeLangBtnId);
         changeLangBtn.setOnClickListener(this);
@@ -170,8 +217,29 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
                 if(lightSwitch.isChecked()) {
                     darkSwitch.setChecked(false);
 
-//                    int mode = AppCompatDelegate.MODE_NIGHT_NO;
-//                    AppCompatDelegate.setDefaultNightMode(mode);
+                    if(temp.equals("light")){
+                        Log.i("Theme ", "Light");
+
+                    } else if(temp.equals("dark")){
+                        temp = "light";
+
+                        try {
+                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+                            fileOutputStream.write(temp.getBytes());
+                            fileOutputStream.close();
+
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+
+                            getActivity().finish();
+                            Intent intent = new Intent(getActivity(), MainActivity.class);
+                            intent.putExtra("Theme_EXTRA", "openMainActivity");
+                            startActivity(intent);
+                        }
+                        catch (Exception e) {
+                            Log.i("Error ", e.getMessage());
+                        }
+                    }
+
                 }
             }
         });
@@ -182,8 +250,28 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
                 if(darkSwitch.isChecked()) {
                     lightSwitch.setChecked(false);
 
-//                    int mode = AppCompatDelegate.MODE_NIGHT_YES;
-//                    AppCompatDelegate.setDefaultNightMode(mode);
+                    if(temp.equals("dark")){
+                        Log.i("Theme ", "Dark");
+
+                    } else if(temp.equals("light")){
+                        temp = "dark";
+
+                        try {
+                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+                            fileOutputStream.write(temp.getBytes());
+                            fileOutputStream.close();
+
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+                            getActivity().finish();
+                            Intent intent = new Intent(getActivity(), MainActivity.class);
+                            intent.putExtra("Theme_EXTRA", "openMainActivity");
+                            startActivity(intent);
+                        }
+                        catch (Exception e) {
+                            Log.i("Error ", e.getMessage());
+                        }
+                    }
                 }
             }
         });

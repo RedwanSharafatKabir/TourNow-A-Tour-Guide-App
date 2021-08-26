@@ -61,7 +61,7 @@
     <string name="total_person"> Total Person</string>
     <string name="division_text"> Division</string>
     <string name="place_text"> Place</string>
-    <string name="transport"> Transport</string>
+    <string name="transport_text"> Transport</string>
     <string name="hotel_text"> Hotel</string>
     <string name="total_days"> Total Days</string>
 
@@ -75,6 +75,39 @@
         <item>Sylhet</item>
         <item>Rangpur</item>
         <item>Mymensingh</item>
+    </string-array>
+
+    <string-array name="places_array">
+        <item>Place</item>
+        <item>Dhaka</item>
+        <item>Chittagong</item>
+        <item>Khulna</item>
+        <item>Barisal</item>
+        <item>Rajshahi</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Mymensingh</item>
+    </string-array>
+
+    <string-array name="transport_array">
+        <item>Transport</item>
+        <item>Non AC Bus</item>
+        <item>AC Bus</item>
+        <item>Train (Local)</item>
+        <item>Train (Inter-City AC)</item>
+        <item>Train (Inter-City Non AC)</item>
+        <item>Launch (Dake)</item>
+        <item>Launch (Double Cabin)</item>
+        <item>Launch (Single Cabin)</item>
+        <item>Airlines (Any)</item>
+    </string-array>
+
+    <string-array name="hotel_array">
+        <item>Hotel</item>
+        <item>5 Star (AC)</item>
+        <item>4 Star (AC)</item>
+        <item>General (AC)</item>
+        <item>General (Non AC)</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

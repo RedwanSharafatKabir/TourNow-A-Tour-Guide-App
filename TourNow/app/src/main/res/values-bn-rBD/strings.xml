@@ -61,7 +61,7 @@
     <string name="total_person"> মোট কতজন</string>
     <string name="division_text"> বিভাগ</string>
     <string name="place_text"> স্থান</string>
-    <string name="transport"> যানবাহন</string>
+    <string name="transport_text"> যানবাহন</string>
     <string name="hotel_text"> হোটেল</string>
     <string name="total_days"> মোট কতদিন</string>
 
@@ -75,6 +75,39 @@
         <item>সিলেট</item>
         <item>রংপুর</item>
         <item>ময়মনসিংহ</item>
+    </string-array>
+
+    <string-array name="places_array">
+        <item>স্থান</item>
+        <item>ঢাকা</item>
+        <item>চট্টগ্রাম</item>
+        <item>খুলনা</item>
+        <item>বরিশাল</item>
+        <item>রাজশাহি</item>
+        <item>সিলেট</item>
+        <item>রংপুর</item>
+        <item>ময়মনসিংহ</item>
+    </string-array>
+
+    <string-array name="transport_array">
+        <item>যানবাহন</item>
+        <item>নন এসি বাস</item>
+        <item>এসি বাস</item>
+        <item>ট্রেন (লোকাল)</item>
+        <item>ট্রেন (ইন্টার-সিটি এসি)</item>
+        <item>ট্রেন (ইন্টার-সিটি নন এসি)</item>
+        <item>লঞ্চ (ডেক)</item>
+        <item>লঞ্চ (ডাবল কেবিন)</item>
+        <item>লঞ্চ (সিঙ্গেল কেবিন)</item>
+        <item>প্লেন (যেকোন)</item>
+    </string-array>
+
+    <string-array name="hotel_array">
+        <item>হোটেল</item>
+        <item>পাঁচ তারকা (এসি)</item>
+        <item>চার তারকা (এসি)</item>
+        <item>সাধারণ (এসি)</item>
+        <item>সাধারণ (নন এসি)</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

@@ -18,7 +18,7 @@
         android:text="@string/budget_calculator"
         android:textColor="@color/colorAccent"
         android:textSize="22sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="10dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -28,7 +28,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center"
             android:padding="5dp"
             android:layout_marginTop="20dp">
 
@@ -172,6 +171,34 @@
                 android:textColorHint="#787878"
                 android:drawableLeft="@drawable/ic_baseline_today_24"/>
 
+            <TextView
+                android:id="@+id/budgetResultId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="@string/budget_calculator"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/budgetAlertId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="@string/alert_text"
+                android:textColor="#FF0000"
+                android:textSize="16sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"/>
+
             <Button
                 android:id="@+id/calculateOutputBtnId"
                 android:layout_width="match_parent"
@@ -184,7 +211,8 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="#fff"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                android:layout_marginBottom="20dp"/>
 
         </LinearLayout>
 

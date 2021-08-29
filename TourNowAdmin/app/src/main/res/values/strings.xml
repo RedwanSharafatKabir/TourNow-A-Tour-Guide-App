@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TourNowAdmin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="division_array">
+        <item>Division</item>
+        <item>Dhaka</item>
+        <item>Chittagong</item>
+        <item>Khulna</item>
+        <item>Barisal</item>
+        <item>Rajshahi</item>
+        <item>Sylhet</item>
+        <item>Rangpur</item>
+        <item>Mymensingh</item>
+    </string-array>
+
+    <string-array name="places_array">
+        <item>Place</item>
+        <item>Park</item>
+        <item>Forests</item>
+        <item>Hill Tracts</item>
+        <item>Sea Beach</item>
+        <item>Historical</item>
+        <item>Museum</item>
+    </string-array>
+
+</resources>

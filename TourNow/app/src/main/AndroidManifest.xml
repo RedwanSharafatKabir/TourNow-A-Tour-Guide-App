@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TourNow">
+
         <activity
             android:name=".BudgetNewsfeedAbout.ParticularPostActivity"
             android:exported="true" />

@@ -8,17 +8,32 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/setToolBarTextId"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_gravity="center|top"
-        android:textSize="18sp"
-        android:textColor="#000"
-        android:fontFamily="sans-serif"
-        android:background="@color/colorAccent"
-        android:text="Tour Now Admin"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/setToolBarTextId"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:fontFamily="sans-serif"
+            android:background="@android:color/transparent"
+            android:text="Tour Now Admin"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/logoutId"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_baseline_logout"
+            android:layout_gravity="center|right"
+            android:layout_marginRight="15dp"/>
+
+    </FrameLayout>
 
     <fragment
         android:id="@+id/fragmentID"

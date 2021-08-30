@@ -25,4 +25,73 @@
         <item>Museum</item>
     </string-array>
 
+    <string-array name="district_array">
+        <item>District</item>
+        <item>Chittagong</item>
+        <item>Dhaka</item>
+        <item>Rajshahi</item>
+        <item>Sylhet</item>
+        <item>Jessore</item>
+        <item>Dinajpur</item>
+        <item>Mymensingh</item>
+        <item>Comilla</item>
+        <item>Barisal</item>
+        <item>Faridpur</item>
+        <item>Bogra</item>
+        <item>Pabna</item>
+        <item>Rangamati</item>
+        <item>Kushtia</item>
+        <item>Rangpur</item>
+        <item>Noakhali</item>
+        <item>Khulna</item>
+        <item>Tangail</item>
+        <item>Panchagarh</item>
+        <item>Bhola</item>
+        <item>Bandarban</item>
+        <item>Chandpur</item>
+        <item>Habiganj</item>
+        <item>Lakshmipur</item>
+        <item>Barguna</item>
+        <item>Jhalokati</item>
+        <item>Pirojpur</item>
+        <item>Patuakhali</item>
+        <item>Jhenaidah</item>
+        <item>Narail</item>
+        <item>Magura</item>
+        <item>Lalmonirhat</item>
+        <item>Kurigram</item>
+        <item>Nilphamari</item>
+        <item>Gaibandha</item>
+        <item>Thakurgaon</item>
+        <item>Satkhira</item>
+        <item>Bagerhat</item>
+        <item>Chuadanga</item>
+        <item>Meherpur</item>
+        <item>Sirajganj</item>
+        <item>Joypurhat</item>
+        <item>Natore</item>
+        <item>Naogaon</item>
+        <item>Nawabganj</item>
+        <item>Khagrachhari</item>
+        <item>Feni</item>
+        <item>Brahmanbaria</item>
+        <item>Sunamganj</item>
+        <item>Coxs Bazar</item>
+        <item>Moulvibazar</item>
+        <item>Gopalganj</item>
+        <item>Shariatpur</item>
+        <item>Madaripur</item>
+        <item>Rajbari</item>
+        <item>Gazipur</item>
+        <item>Kishoreganj</item>
+        <item>Jamalpur</item>
+        <item>Sherpur</item>
+        <item>Netrakona</item>
+        <item>Munshiganj</item>
+        <item>Narsingdi</item>
+        <item>Narayanganj</item>
+        <item>Manikganj</item>
+
+    </string-array>
+
 </resources>

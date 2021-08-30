@@ -41,7 +41,7 @@
                     android:layout_height="50dp"
                     android:layout_gravity="center|end"
                     android:layout_marginRight="@dimen/fab_margin"
-                    android:src="@drawable/ic_person"/>
+                    android:src="@drawable/add_photo"/>
 
                 <TextView
                     android:id="@+id/setToolBarTextId"

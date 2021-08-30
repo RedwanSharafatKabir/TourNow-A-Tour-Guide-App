@@ -75,6 +75,26 @@
                     android:background="@color/colorAccent"/>
 
                 <Spinner
+                    android:id="@+id/districtSpinnerId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp">
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorAccent"/>
+
+                <Spinner
                     android:id="@+id/placeTypeSpinnerId"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
@@ -123,12 +143,36 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+            <LinearLayout
+                android:id="@+id/uploadImageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/upload_image"/>
+
+                <TextView
+                    android:id="@+id/uploadImageTextId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Upload Image"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+            </LinearLayout>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:cardElevation="5dp"
                 app:cardCornerRadius="5dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="40dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp">
 

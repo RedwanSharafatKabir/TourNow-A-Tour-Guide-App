@@ -15,29 +15,31 @@
         app:cardCornerRadius="5dp"
         android:layout_margin="5dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/guardianImageId"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerInParent="true"
-                android:src="@drawable/ic_baseline_place"
-                android:layout_marginRight="5dp"/>
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_baseline_place" />
 
             <LinearLayout
                 android:id="@+id/linearLayoutId"
                 android:layout_toRightOf="@+id/guardianImageId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_alignParentRight="true"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:layout_below="@+id/guardianImageId"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
 
                 <TextView
                     android:id="@+id/placeNameId"
@@ -57,7 +59,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/districtId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="District"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
 
                 <TextView
                     android:id="@+id/placeTypeId"
@@ -67,11 +79,31 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeDetailsId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeGuideId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 

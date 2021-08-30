@@ -92,8 +92,10 @@ public class HomeFragment extends Fragment {
                     for (DataSnapshot item : snapshot.getChildren()) {
                         for (DataSnapshot dataSnapshot : item.getChildren()) {
                             for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                StorePlaceData storePlaceData = dataSnapshot1.getValue(StorePlaceData.class);
-                                storePlaceDataArrayList.add(storePlaceData);
+                                for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
+                                    StorePlaceData storePlaceData = dataSnapshot2.getValue(StorePlaceData.class);
+                                    storePlaceDataArrayList.add(storePlaceData);
+                                }
                             }
                         }
                     }

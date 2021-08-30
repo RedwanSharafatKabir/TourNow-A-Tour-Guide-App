@@ -125,7 +125,6 @@ public class BudgetCalculateFragment extends Fragment implements View.OnClickLis
         });
     }
 
-
     @Override
     public void onClick(View v) {
         totalPersonValue = totalPerson.getText().toString();

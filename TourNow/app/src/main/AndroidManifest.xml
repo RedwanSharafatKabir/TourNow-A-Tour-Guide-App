@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TourNow">
 
+        <activity android:name=".ui.home.PlaceListByDivision"
+            android:exported="true" />
+        <activity android:name=".ui.home.PlaceListByPlaceType"
+            android:exported="true" />
         <activity
             android:name=".BudgetNewsfeedAbout.ParticularPostActivity"
             android:exported="true" />

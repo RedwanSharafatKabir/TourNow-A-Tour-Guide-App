@@ -20,8 +20,7 @@ public class NetworkErrorActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.bar_text);
 
         Bundle bundle = getIntent().getExtras();
-        if(bundle != null)
-        {
+        if(bundle != null) {
             textView.setText(bundle.getString("name"));
         }
 

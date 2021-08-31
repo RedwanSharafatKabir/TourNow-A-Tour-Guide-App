@@ -42,7 +42,6 @@ public class DivisionFragment extends Fragment {
 
         ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
-        final boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting() && activeNetwork.isAvailable();
 
         for (int i=0;i<gridLayout.getChildCount();i++) {
 
@@ -53,32 +52,17 @@ public class DivisionFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (finalI==0){
-                        if (isConnected){
-                            Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
-                            startActivity(intent);
-                        }
-                        else {
-                            Intent intent = new Intent(getActivity(), NetworkErrorActivity.class);
-                            intent.putExtra("name", getString(R.string.dhaka_division));
-                            startActivity(intent);
-                        }
+                        Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
+                        startActivity(intent);
                     }
 
                     if (finalI==1){
-                        if (isConnected){
-                            Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
-                            startActivity(intent);
-                        }
-                        else {
-                            Intent intent = new Intent(getActivity(), NetworkErrorActivity.class);
-                            intent.putExtra("name", getString(R.string.dhaka_division));
-                            startActivity(intent);
-                        }
+                        Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
+                        startActivity(intent);
                     }
                 }
             });
 
         }
     }
-
 }

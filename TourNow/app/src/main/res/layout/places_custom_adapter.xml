@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/guardianImageId"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutId"
+                android:layout_toRightOf="@+id/guardianImageId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/guardianImageId"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/placeNameId"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Place Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/divisionId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Division"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/districtId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="District"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeTypeId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeDetailsId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeGuideId"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

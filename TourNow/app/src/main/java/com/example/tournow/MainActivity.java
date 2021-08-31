@@ -162,6 +162,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         try {
             switch (getIntent().getStringExtra("EXTRA")) {
+                case "openDivisionFragment":
+                    toolBarText.setText(getResources().getText(R.string.menu_travel_division));
+                    fragment = new DivisionFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentID, fragment, "MY_FRAGMENT");
+                    fragmentTransaction.commit();
+                    break;
+            }
+        } catch (Exception e){
+            Log.i("Error ", e.getMessage());
+        }
+
+        try {
+            switch (getIntent().getStringExtra("EXTRA")) {
+                case "openPlaceTypeFragment":
+                    toolBarText.setText(getResources().getText(R.string.menu_travel));
+                    fragment = new TravelFragment();
+                    fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                    fragmentTransaction.replace(R.id.fragmentID, fragment, "MY_FRAGMENT");
+                    fragmentTransaction.commit();
+                    break;
+            }
+        } catch (Exception e){
+            Log.i("Error ", e.getMessage());
+        }
+
+        try {
+            switch (getIntent().getStringExtra("EXTRA")) {
                 case "openNewsfeedFragment":
                     toolBarText.setText(getResources().getText(R.string.menu_newsfeed));
                     fragment = new NewsfeedFragment();

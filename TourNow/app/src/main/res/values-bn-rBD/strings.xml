@@ -78,7 +78,7 @@
     </string-array>
 
     <string-array name="places_array">
-        <item>স্থান</item>
+        <item>জেলা</item>
         <item>ঢাকা</item>
         <item>চট্টগ্রাম</item>
         <item>খুলনা</item>
@@ -87,6 +87,62 @@
         <item>সিলেট</item>
         <item>রংপুর</item>
         <item>ময়মনসিংহ</item>
+        <item>যশোর</item>
+        <item>দিনাজপুর</item>
+        <item>কুমিল্লা</item>
+        <item>ফরিদপুর</item>
+        <item>বগুড়া</item>
+        <item>পাবনা</item>
+        <item>রাঙ্গামাটি</item>
+        <item>কুষ্টিয়া</item>
+        <item>নোয়াখালী</item>
+        <item>টাঙাইল</item>
+        <item>পঞ্চগড়</item>
+        <item>ভোলা</item>
+        <item>বান্দরবান</item>
+        <item>চাঁদপুর</item>
+        <item>হবিগঙ্ক</item>
+        <item>লক্ষ্মীপুর</item>
+        <item>বরগুনা</item>
+        <item>ঝালকাঠি</item>
+        <item>পিরোজপুর</item>
+        <item>পটুয়াখালী</item>
+        <item>ঝিনাইদহ</item>
+        <item>নরাইল</item>
+        <item>মাগুরা</item>
+        <item>লালমনিরহাট</item>
+        <item>কুড়িগ্রাম</item>
+        <item>নীলফামারী</item>
+        <item>গাইবান্ধা</item>
+        <item>ঠাকুরগাঁও</item>
+        <item>সাতক্ষীরা</item>
+        <item>বাগেরহাট</item>
+        <item>চুয়াডাঙ্গা</item>
+        <item>মেহেরপুর</item>
+        <item>সিরাজগঞ্জ</item>
+        <item>জয়পুরহাট</item>
+        <item>নাটোর</item>
+        <item>নওগা</item>
+        <item>নবাবগঞ্জ</item>
+        <item>খাগড়াছড়ি</item>
+        <item>ফেনি</item>
+        <item>ব্রাহ্মণবাড়িয়া</item>
+        <item>সুনামগঞ্জ</item>
+        <item>কক্সবাজার</item>
+        <item>মৌলভীবাজার</item>
+        <item>গোপালগঞ্জ</item>
+        <item>শরীয়তপুর</item>
+        <item>মাদারীপুর</item>
+        <item>রাজবাড়ি</item>
+        <item>গাজিপুর</item>
+        <item>কিশোরগঞ্জ</item>
+        <item>জামালপুর</item>
+        <item>শেরপুর</item>
+        <item>নেত্রকনা</item>
+        <item>মুন্সিগঞ্জ</item>
+        <item>নরসিংদি</item>
+        <item>নারায়নগঞ্জ</item>
+        <item>মানিকগঞ্জ</item>
     </string-array>
 
     <string-array name="transport_array">

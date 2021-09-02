@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TourNow">
 
-        <activity android:name=".ui.home.PlaceListByDivision"
+        <activity android:name=".ui.home.PlaceListByDistrict"
             android:exported="true" />
         <activity android:name=".ui.home.PlaceListByPlaceType"
             android:exported="true" />
@@ -20,7 +20,7 @@
             android:name=".BudgetNewsfeedAbout.ParticularPostActivity"
             android:exported="true" />
         <activity android:name=".NetworkErrorActivity" />
-        <activity android:name=".DhakaDivisionActivity" />
+        <activity android:name=".ui.home.DistrictListActivity" />
         <activity android:name=".TrainTicketActivityWebview" />
         <activity android:name=".TrainTicketActivity" />
         <activity android:name=".LaunchTicketActivityWebview" />

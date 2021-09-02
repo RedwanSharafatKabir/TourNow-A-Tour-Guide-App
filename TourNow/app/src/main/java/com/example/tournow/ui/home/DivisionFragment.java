@@ -1,7 +1,6 @@
 package com.example.tournow.ui.home;
 
 import androidx.cardview.widget.CardView;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,8 +17,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridLayout;
 
-import com.example.tournow.DhakaDivisionActivity;
-import com.example.tournow.NetworkErrorActivity;
 import com.example.tournow.R;
 
 public class DivisionFragment extends Fragment {
@@ -52,12 +49,50 @@ public class DivisionFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     if (finalI==0){
-                        Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Dhaka");
                         startActivity(intent);
                     }
 
                     if (finalI==1){
-                        Intent intent = new Intent(getActivity(), DhakaDivisionActivity.class);
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Chittagong");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==2){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Khulna");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==3){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Barisal");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==4){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Rajshahi");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==5){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Sylhet");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==6){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Rangpur");
+                        startActivity(intent);
+                    }
+
+                    if (finalI==7){
+                        Intent intent = new Intent(getActivity(), DistrictListActivity.class);
+                        intent.putExtra("division_key", "Mymensingh");
                         startActivity(intent);
                     }
                 }

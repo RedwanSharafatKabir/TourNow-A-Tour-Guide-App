@@ -238,11 +238,12 @@
                     android:layout_height="90dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/shylet"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:text="@string/division_shylet"
+                    android:text="@string/division_sylhet"
                     android:textStyle="bold"
                     android:textSize="18sp"
                     android:textColor="@color/black"

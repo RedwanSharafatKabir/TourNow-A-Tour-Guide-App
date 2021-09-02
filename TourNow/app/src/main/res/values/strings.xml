@@ -196,12 +196,69 @@
     <string name="soriyotpur">Shariatpur</string>
 
     <string name="division_chottogram">Chittagong</string>
+    <string name="bandarban">Bandarban</string>
+    <string name="brahmanbaria">Brahmanbaria</string>
+    <string name="chandpur">Chandpur</string>
+    <string name="chattogram">Chattogram</string>
+    <string name="coxs_Bazar">Cox’s Bazar</string>
+    <string name="cumilla">Cumilla</string>
+    <string name="feni">Feni</string>
+    <string name="khagrachhari">Khagrachhari</string>
+    <string name="lakshmipur">Lakshmipur</string>
+    <string name="noakhali">Noakhali</string>
+    <string name="rangamati">Rangamati</string>
+
     <string name="division_khulna">Khulna</string>
+    <string name="Bagerhat">Bagerhat</string>
+    <string name="Chuadanga">Chuadanga</string>
+    <string name="Jashore">Jashore</string>
+    <string name="Jhenaidah">Jhenaidah</string>
+    <string name="Khulna">Khulna</string>
+    <string name="Kushtia">Kushtia</string>
+    <string name="Magura">Magura</string>
+    <string name="Meherpur">Meherpur</string>
+    <string name="Narail">Narail</string>
+    <string name="Satkhira">Satkhira</string>
+
     <string name="division_barishal">Barisal</string>
+    <string name="barguna">Barguna</string>
+    <string name="barishal">Barishal</string>
+    <string name="bhola">Bhola</string>
+    <string name="jhalokati">Jhalokati</string>
+    <string name="patuakhali">Patuakhali</string>
+    <string name="pirojpur">Pirojpur</string>
+
     <string name="division_rajshahi">Rajshahi</string>
-    <string name="division_shylet">Sylhet</string>
+    <string name="Bogura">Bogura</string>
+    <string name="Joypurhat">Joypurhat</string>
+    <string name="Naogaon">Naogaon</string>
+    <string name="Natore">Natore</string>
+    <string name="Chapainawabganj">Chapainawabganj</string>
+    <string name="Pabna">Pabna</string>
+    <string name="Rajshahi">Rajshahi</string>
+    <string name="Sirajganj">Sirajganj</string>
+
+    <string name="division_sylhet">Sylhet</string>
+    <string name="Habiganj">Habiganj</string>
+    <string name="Moulvibazar">Moulvibazar</string>
+    <string name="Sunamganj">Sunamganj</string>
+    <string name="Sylhet">Sylhet</string>
+
     <string name="division_rangpur">Rangpur</string>
+    <string name="Dinajpur">Dinajpur</string>
+    <string name="Gaibandha">Gaibandha</string>
+    <string name="Kurigram">Kurigram</string>
+    <string name="Lalmonirhat">Lalmonirhat</string>
+    <string name="Nilphamari">Nilphamari</string>
+    <string name="Panchagarh">Panchagarh</string>
+    <string name="Rangpur">Rangpur</string>
+    <string name="Thakurgaon">Thakurgaon</string>
+
     <string name="division_mymenshingh">Mymensingh</string>
+    <string name="Jamalpur">Jamalpur</string>
+    <string name="Mymensingh">Mymensingh</string>
+    <string name="Netrokona">Netrokona</string>
+    <string name="Sherpur">Sherpur</string>
 
     <string name="buking_hotel">Book your resort/hotel from home</string>
     <string name="buked_hotel">Choose your hotel here</string>

@@ -169,9 +169,6 @@
     <string name="taka_text"> ৳</string>
     <string name="alert_text">* এই হিসাব সম্পূর্ণ আপেক্ষিক, বিভিন্ন হোটেল ও যানবাহন ভেদে খরচ ভিন্ন হতে পারে।</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="travel_binodon">বিনোদন কেন্দ্র</string>
     <string name="travel_bonanchol">বনাঞ্চল</string>
     <string name="travel_pahar">পাহাড় পর্বত</string>
@@ -196,12 +193,69 @@
     <string name="soriyotpur">শরিয়তপুর</string>
 
     <string name="division_chottogram">চট্টগ্রাম</string>
+    <string name="bandarban">বান্দরবান</string>
+    <string name="brahmanbaria">ব্রাহ্মণবাড়িয়া</string>
+    <string name="chandpur">চাঁদপুর</string>
+    <string name="chattogram">চট্টগ্রাম</string>
+    <string name="coxs_Bazar">কক্সবাজার</string>
+    <string name="cumilla">কুমিল্লা</string>
+    <string name="feni">ফেনী</string>
+    <string name="khagrachhari">খাগড়াছড়ি</string>
+    <string name="lakshmipur">লক্ষ্মীপুর</string>
+    <string name="noakhali">নোয়াখালী</string>
+    <string name="rangamati">রাঙ্গামাটি</string>
+
     <string name="division_khulna">খুলনা</string>
+    <string name="Bagerhat">বাগেরহাট</string>
+    <string name="Chuadanga">চুয়াডাঙ্গা</string>
+    <string name="Jashore">যশোর</string>
+    <string name="Jhenaidah">ঝিনাইদহ</string>
+    <string name="Khulna">খুলনা</string>
+    <string name="Kushtia">কুষ্টিয়া</string>
+    <string name="Magura">মাগুরা</string>
+    <string name="Meherpur">মেহেরপুর</string>
+    <string name="Narail">নড়াইল</string>
+    <string name="Satkhira">সাতক্ষীরা</string>
+
     <string name="division_barishal">বরিশাল</string>
+    <string name="barguna">বরগুনা</string>
+    <string name="barishal">বরিশাল</string>
+    <string name="bhola">ভোলা</string>
+    <string name="jhalokati">ঝালকাঠি</string>
+    <string name="patuakhali">পটুয়াখালী</string>
+    <string name="pirojpur">পিরোজপুর</string>
+
     <string name="division_rajshahi">রাজশাহী</string>
-    <string name="division_shylet">সিলেট</string>
+    <string name="Bogura">বগুড়া</string>
+    <string name="Joypurhat">জয়পুরহাট</string>
+    <string name="Naogaon">নওগাঁ</string>
+    <string name="Natore">নাটোর</string>
+    <string name="Chapainawabganj">চাঁপাইনবাবগঞ্জ</string>
+    <string name="Pabna">পাবনা</string>
+    <string name="Rajshahi">রাজশাহী</string>
+    <string name="Sirajganj">সিরাজগঞ্জ</string>
+
+    <string name="division_sylhet">সিলেট</string>
+    <string name="Habiganj">হবিগঞ্জ</string>
+    <string name="Moulvibazar">মৌলভীবাজার</string>
+    <string name="Sunamganj">সুনামগঞ্জ</string>
+    <string name="Sylhet">সিলেট</string>
+
     <string name="division_rangpur">রংপুর</string>
+    <string name="Dinajpur">দিনাজপুর</string>
+    <string name="Gaibandha">গাইবান্ধা</string>
+    <string name="Kurigram">কুড়িগ্রাম</string>
+    <string name="Lalmonirhat">লালমনিরহাট</string>
+    <string name="Nilphamari">নীলফামারী</string>
+    <string name="Panchagarh">পঞ্চগড়</string>
+    <string name="Rangpur">রংপুর</string>
+    <string name="Thakurgaon">ঠাকুরগাঁও</string>
+
     <string name="division_mymenshingh">ময়মনসিংহ</string>
+    <string name="Jamalpur">জামালপুর</string>
+    <string name="Mymensingh">ময়মনসিংহ</string>
+    <string name="Netrokona">নেত্রকোণা</string>
+    <string name="Sherpur">শেরপুর</string>
 
     <string name="buking_hotel"> ঘরে বসে যে কোনো জায়গার হোটেল বুক করুন</string>
     <string name="buked_hotel"> পছন্দের হোটেলটি এখান থেকে বুক করুন</string>

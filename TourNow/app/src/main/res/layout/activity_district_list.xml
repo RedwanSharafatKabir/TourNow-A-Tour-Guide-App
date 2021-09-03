@@ -50,521 +50,2618 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <GridLayout
-                android:id="@+id/division_dhaka_gridlayout"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:alignmentMode="alignMargins"
-                android:columnCount="1"
-                android:rowCount="13"
-                android:minHeight="600dp"
-                android:columnOrderPreserved="false"
-                android:paddingLeft="8dp"
-                android:paddingRight="8dp"
-                android:paddingTop="8dp">
+                android:orientation="vertical">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_dhaka_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/kisorgonj"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/kisorganj"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/kisorgonj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/gajipur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/gopalgonj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/tangail"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/dhaka"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/norsingdi"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/narayongonj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/narayangonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/faridpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/foridpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/madaripur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/madaripur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/manikgonj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/manikgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/munsigonj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/munsigonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/rajbari"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/rajbari"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/soriyotpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/soriyotpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_chtgrm_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/gajipur"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/gajipur"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/bandarban"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/brahmanbaria"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/chandpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/chattogram"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/narayangonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/coxs_Bazar"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/foridpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/cumilla"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/madaripur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/feni"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/manikgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/khagrachhari"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/munsigonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/lakshmipur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/rajbari"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/noakhali"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/soriyotpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="12dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/rangamati"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/soriyotpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_khulna_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/gopalgonj"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/gopalgonj"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Bagerhat"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Chuadanga"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Jashore"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Jhenaidah"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Khulna"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Kushtia"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Magura"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/narayangonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Meherpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/foridpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Narail"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/madaripur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Satkhira"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/manikgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_barisal_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/tangail"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/tangail"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/barguna"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/barishal"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/bhola"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/jhalokati"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/patuakhali"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/pirojpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_sylhet_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/dhaka"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/dhaka_ahsan_manjil"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Habiganj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Moulvibazar"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Sunamganj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Sylhet"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_rajshahi_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/norsingdi"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/norsingdi"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Bogura"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Joypurhat"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Naogaon"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Natore"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Chapainawabganj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Pabna"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Rajshahi"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/narayangonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Sirajganj"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/foridpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_rangpur_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="13"
+                    android:minHeight="600dp"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/narayongonj"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/narayangonj"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Dinajpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Gaibandha"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Kurigram"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Lalmonirhat"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Nilphamari"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/dhaka_ahsan_manjil"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Panchagarh"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/norsingdi"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Rangpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/narayangonj"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Thakurgaon"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
+
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/foridpur"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:visibility="gone"
+                    android:id="@+id/division_mymnsngh_gridlayout"
                     android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                    android:layout_height="match_parent"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="1"
+                    android:rowCount="4"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                    <androidx.cardview.widget.CardView
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/faridpur"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
-
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/foridpur"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
-
-                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/madaripur"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/madaripur"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Jamalpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/kisorganj"/>
 
-                    <LinearLayout
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/manikgonj"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/manikgonj"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Mymensingh"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gajipur"/>
 
-                    <LinearLayout
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/munsigonj"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/munsigonj"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Netrokona"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="6dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/gopalgonj"/>
 
-                    <LinearLayout
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_height="wrap_content"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:layout_marginRight="4dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="6dp">
 
-                        <TextView
-                            android:layout_width="150dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/rajbari"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
 
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/rajbari"/>
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="@string/Sherpur"
+                                android:layout_weight="1"
+                                android:textStyle="bold"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:layout_gravity="center_vertical"/>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="4dp"
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginBottom="12dp"
-                    app:cardCornerRadius="4dp"
-                    app:cardElevation="6dp">
+                            <ImageView
+                                android:layout_weight="1"
+                                android:layout_width="125dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="fill_horizontal"
+                                android:src="@drawable/tangail"/>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </GridLayout>
 
-                        <TextView
-                            android:layout_width="150dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="16dp"
-                            android:text="@string/soriyotpur"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            android:textColor="@color/black"
-                            android:layout_gravity="center_vertical"/>
-
-                        <ImageView
-                            android:layout_weight="1"
-                            android:layout_width="125dp"
-                            android:layout_height="100dp"
-                            android:layout_gravity="fill_horizontal"
-                            android:src="@drawable/soriyotpur"/>
-
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-            </GridLayout>
+            </LinearLayout>
 
         </ScrollView>
 

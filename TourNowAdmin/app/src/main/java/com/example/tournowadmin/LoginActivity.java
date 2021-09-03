@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,51 +57,70 @@ public class LoginActivity extends AppCompatActivity {
                 }
 
                 else if (!emailText.equals("") || !passwordText.equals("")){
-                    databaseReference.child("admin1").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            if(emailText.equals(snapshot.child("email").getValue().toString()) &&
-                                    passwordText.equals(snapshot.child("password").getValue().toString())){
+                    try {
+                        databaseReference.child("admin1").addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                try{
+                                    if (emailText.equals(snapshot.child("email").getValue().toString()) &&
+                                            passwordText.equals(snapshot.child("password").getValue().toString())) {
 
-                                rememberUser(passedString);
-                                finish();
-                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                startActivity(intent);
+                                        rememberUser(passedString);
+                                        finish();
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        startActivity(intent);
 
-                                email.setText("");
-                                password.setText("");
-                            }
+                                        email.setText("");
+                                        password.setText("");
 
-                            else {
-                                databaseReference.child("admin2").addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if(emailText.equals(snapshot.child("email").getValue().toString()) &&
-                                                passwordText.equals(snapshot.child("password").getValue().toString())){
+                                    }
+                                    else {
+                                        try{
+                                            databaseReference.child("admin2").addListenerForSingleValueEvent(new ValueEventListener() {
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                                    try{
+                                                        if (emailText.equals(snapshot.child("email").getValue().toString()) &&
+                                                                passwordText.equals(snapshot.child("password").getValue().toString())) {
 
-                                            rememberUser(passedString);
-                                            finish();
-                                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                            startActivity(intent);
+                                                            rememberUser(passedString);
+                                                            finish();
+                                                            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                                            startActivity(intent);
 
-                                            email.setText("");
-                                            password.setText("");
-                                        }
+                                                            email.setText("");
+                                                            password.setText("");
 
-                                        else {
-                                            Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+                                                        } else {
+                                                            Toast.makeText(getApplicationContext(), "Login failed", Toast.LENGTH_SHORT).show();
+                                                        }
+
+                                                    } catch (Exception e){
+                                                        Log.i("Error_db ", e.getMessage());
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError error) {}
+                                            });
+
+                                        } catch (Exception e){
+                                            Log.i("Error_db ", e.getMessage());
                                         }
                                     }
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {}
-                                });
+                                } catch (Exception e){
+                                    Log.i("Error_db ", e.getMessage());
+                                }
                             }
-                        }
 
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {}
-                    });
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {}
+                        });
+
+                    } catch (Exception e){
+                        Log.i("Error_db ", e.getMessage());
+                    }
                 }
             }
         });

@@ -169,9 +169,6 @@
     <string name="taka_text"> tk</string>
     <string name="alert_text">* This calculation is an approximate. It may vary on different hotel and transport ticket.</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
     <string name="travel_binodon">Park</string>
     <string name="travel_bonanchol">Forests</string>
     <string name="travel_pahar">Hill Tracts</string>

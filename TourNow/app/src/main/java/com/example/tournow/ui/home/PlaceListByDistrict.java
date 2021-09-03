@@ -12,9 +12,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tournow.MainActivity;
@@ -72,40 +74,48 @@ public class PlaceListByDistrict extends AppCompatActivity implements View.OnCli
 
         backPage = findViewById(R.id.backPageId2);
         backPage.setOnClickListener(this);
-
     }
 
     private void showParks() {
         if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-            databaseReference.child(messageDiv).addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    storePlaceDataArrayList.clear();
 
-                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                        if(messageDist.equals(dataSnapshot.getKey())){
-                            for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
-                                    StorePlaceData storePlaceData = dataSnapshot2.getValue(StorePlaceData.class);
-                                    storePlaceDataArrayList.add(storePlaceData);
+            try {
+                databaseReference.child(messageDiv).addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        storePlaceDataArrayList.clear();
+
+                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                            try {
+                                if (messageDist.equals(dataSnapshot.getKey())) {
+                                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                        for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
+                                            StorePlaceData storePlaceData = dataSnapshot2.getValue(StorePlaceData.class);
+                                            storePlaceDataArrayList.add(storePlaceData);
+                                        }
+                                    }
                                 }
+                            } catch (Exception e){
+                                Log.i("Error_Db ", e.getMessage());
                             }
                         }
+
+                        placesCustomAdapter = new PlacesCustomAdapter(PlaceListByDistrict.this, storePlaceDataArrayList);
+                        recyclerView.setAdapter(placesCustomAdapter);
+                        placesCustomAdapter.notifyDataSetChanged();
+                        recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
+
+                        progressBar.setVisibility(View.GONE);
                     }
 
-                    placesCustomAdapter = new PlacesCustomAdapter(PlaceListByDistrict.this, storePlaceDataArrayList);
-                    recyclerView.setAdapter(placesCustomAdapter);
-                    placesCustomAdapter.notifyDataSetChanged();
-                    recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
-
-                    progressBar.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-                    progressBar.setVisibility(View.GONE);
-                }
-            });
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
+            } catch (Exception e){
+                Log.i("Error_Db ", e.getMessage());
+            }
         }
 
         else {

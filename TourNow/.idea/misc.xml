@@ -11,6 +11,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/close_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/create_post_background.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/discard_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_arrow_drop_down.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_attach_image.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/drawable/ic_baseline_attach_video.xml" value="0.22552083333333334" />
@@ -36,6 +37,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_bus_ticket.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_bus_ticket_webview.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_dhaka_division.xml" value="0.20615384615384616" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_district_list.xml" value="0.22" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_hotel_buking.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_hotel_buking_webview.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_launch_ticket.xml" value="0.209375" />
@@ -44,6 +46,7 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_network_error.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_particular_post.xml" value="0.2" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_place_list_by_district.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_place_list_by_division.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_register.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNow/app/src/main/res/layout/activity_train_ticket.xml" value="0.209375" />

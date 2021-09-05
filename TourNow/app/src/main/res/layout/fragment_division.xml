@@ -85,7 +85,7 @@
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/chottogram"/>
+                    android:src="@drawable/chittagong"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -161,7 +161,7 @@
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/barishal"/>
+                    android:src="@drawable/barisal"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -237,7 +237,7 @@
                     android:layout_width="100dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/shylet"/>
+                    android:src="@drawable/sylhet_city"/>
 
                 <TextView
                     android:layout_width="wrap_content"

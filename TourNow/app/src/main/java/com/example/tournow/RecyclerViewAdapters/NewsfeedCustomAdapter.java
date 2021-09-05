@@ -1,27 +1,18 @@
 package com.example.tournow.RecyclerViewAdapters;
 
-import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.tournow.BudgetNewsfeedAbout.ParticularPostActivity;
 import com.example.tournow.LoginActivity;
 import com.example.tournow.ModelClasses.StoreLikedPost;
@@ -65,6 +56,7 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
         String userPhone = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
         String imageUrl = storePostInfo.get(position).getImageUrl();
         String videoUrl = storePostInfo.get(position).getVideoUrl();
+        String postToken = storePostInfo.get(position).getPostToken();
 
         holder.nametext.setText(postUserName);
         holder.postText.setText(postDescription);
@@ -79,27 +71,6 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
         else if(imageUrl.equals("No_Image")){
             holder.postImage.setVisibility(View.GONE);
         }
-
-        /*
-        try {
-            databaseReference3.child(postUserPhone).child("avatar").addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    try{
-                        Picasso.get().load(snapshot.getValue().toString()).into(holder.postOwnerImage);
-                    } catch (Exception e){
-                        Log.i("Error ", "Image not found");
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {}
-            });
-
-        } catch (Exception e){
-            Log.i("Error ", "Image not founr");
-        }
-        */
 
         holder.likeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,10 +93,10 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
 
                                             } catch (Exception e){
                                                 storePostData(snapshot.getKey(), postDescription, postUserName,
-                                                        postUserPhone, (count+1), imageUrl, videoUrl);
+                                                        postUserPhone, (count+1), imageUrl, videoUrl, postToken);
 
                                                 storeLikedData(userPhone, snapshot.getKey(), postDescription, true, imageUrl,
-                                                        videoUrl, postUserPhone);
+                                                        videoUrl, postUserPhone, postToken);
                                             }
                                         }
 
@@ -172,107 +143,26 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
             }
         });
 
-        holder.postImage.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        for (DataSnapshot item : dataSnapshot.getChildren()) {
-                            for (DataSnapshot snapshot : item.getChildren()) {
+                Intent it = new Intent(context, ParticularPostActivity.class);
+                it.putExtra("postOwnerName_key", postUserName);
+                it.putExtra("postDescription_key", postDescription);
+                it.putExtra("postImageUrl_key", imageUrl);
+                it.putExtra("postOwnerPhone_key", postUserPhone);
+                it.putExtra("postLikes_key", String.valueOf(count));
+                it.putExtra("postVideoUrl_key", videoUrl);
+                it.putExtra("postIdentity_key", postToken);
+                context.startActivity(it);
 
-                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
-                                    String testKey = snapshot.getKey();
-
-                                    Intent it = new Intent(context, ParticularPostActivity.class);
-                                    it.putExtra("postOwnerName_key", postUserName);
-                                    it.putExtra("postDescription_key", postDescription);
-                                    it.putExtra("postImageUrl_key", imageUrl);
-                                    it.putExtra("postOwnerPhone_key", postUserPhone);
-                                    it.putExtra("postLikes_key", String.valueOf(count));
-                                    it.putExtra("postVideoUrl_key", videoUrl);
-                                    it.putExtra("postIdentity_key", testKey);
-                                    context.startActivity(it);
-                                }
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {}
-                });
-            }
-        });
-
-        holder.postText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        for (DataSnapshot item : dataSnapshot.getChildren()) {
-                            for (DataSnapshot snapshot : item.getChildren()) {
-
-                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
-                                    String testKey = snapshot.getKey();
-
-                                    Intent it = new Intent(context, ParticularPostActivity.class);
-                                    it.putExtra("postOwnerName_key", postUserName);
-                                    it.putExtra("postDescription_key", postDescription);
-                                    it.putExtra("postImageUrl_key", imageUrl);
-                                    it.putExtra("postOwnerPhone_key", postUserPhone);
-                                    it.putExtra("postLikes_key", String.valueOf(count));
-                                    it.putExtra("postVideoUrl_key", videoUrl);
-                                    it.putExtra("postIdentity_key", testKey);
-                                    context.startActivity(it);
-                                }
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {}
-                });
-            }
-        });
-
-        holder.commentBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                databaseReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-
-                        for (DataSnapshot item : dataSnapshot.getChildren()) {
-                            for (DataSnapshot snapshot : item.getChildren()) {
-
-                                if(postDescription.equals(snapshot.child("post").getValue().toString())){
-                                    String testKey = snapshot.getKey();
-
-                                    Intent it = new Intent(context, ParticularPostActivity.class);
-                                    it.putExtra("postOwnerName_key", postUserName);
-                                    it.putExtra("postDescription_key", postDescription);
-                                    it.putExtra("postImageUrl_key", imageUrl);
-                                    it.putExtra("postOwnerPhone_key", postUserPhone);
-                                    it.putExtra("postLikes_key", String.valueOf(count));
-                                    it.putExtra("postVideoUrl_key", videoUrl);
-                                    it.putExtra("postIdentity_key", testKey);
-                                    context.startActivity(it);
-                                }
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {}
-                });
+                Log.i("Open_particular_post_page ", "Why man why");
             }
         });
     }
 
-    private void deletePostMethod(String userPhone, String postKey){
+    private void deletePostMethod(String userPhone, String postToken){
         AlertDialog.Builder alertDialogBuilder;
         alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder.setMessage("Do you want to delete this post ?");
@@ -282,8 +172,9 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try{
-                    databaseReference.child(userPhone).child(postKey).removeValue();
-                    databaseReference2.child(userPhone).child(postKey).removeValue();
+                    databaseReference.child(userPhone).child(postToken).removeValue();
+                    databaseReference2.child(userPhone).child(postToken).removeValue();
+                    databaseReference3.child(userPhone).child(postToken).removeValue();
                 } catch (Exception e){
                     Log.i("Message ", "Deleted");
                 }
@@ -302,15 +193,15 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
     }
 
     private void storeLikedData(String userPhone, String targetKey, String postText, boolean liked,
-                                String imageUrl, String videoUrl, String postUserPhone){
+                                String imageUrl, String videoUrl, String postUserPhone, String postToken){
 
-        StoreLikedPost storeLikedPost = new StoreLikedPost(userPhone, postText, liked, imageUrl, videoUrl, postUserPhone);
+        StoreLikedPost storeLikedPost = new StoreLikedPost(userPhone, postText, liked, imageUrl, videoUrl, postUserPhone, postToken);
         databaseReference2.child(userPhone).child(targetKey).setValue(storeLikedPost);
     }
 
     private void storePostData(String targetKey, String postText, String userName, String postUserPhone,
-                               int count,  String imageUrl, String videoUrl){
-        StorePostInfo storePostInfo = new StorePostInfo(postUserPhone, userName, postText, count, imageUrl, videoUrl);
+                               int count,  String imageUrl, String videoUrl, String postToken){
+        StorePostInfo storePostInfo = new StorePostInfo(postUserPhone, userName, postText, count, imageUrl, videoUrl, postToken);
         databaseReference.child(postUserPhone).child(targetKey).setValue(storePostInfo);
     }
 
@@ -322,13 +213,9 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView nametext, postText, commentBtn, likedPeople;
         ImageView likeBtn, postImage, deletePost;
-//        CircleImageView postOwnerImage;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-
-//            postOwnerImage = itemView.findViewById(R.id.postOwnerImageId);
-//            postOwnerImage.setVisibility(View.GONE);
 
             nametext = itemView.findViewById(R.id.publisherNameId);
             postText = itemView.findViewById(R.id.publishedPostId);
@@ -341,7 +228,7 @@ public class NewsfeedCustomAdapter extends RecyclerView.Adapter<NewsfeedCustomAd
 
             databaseReference = FirebaseDatabase.getInstance().getReference("Post Info");
             databaseReference2 = FirebaseDatabase.getInstance().getReference("Liked Post");
-//            databaseReference3 = FirebaseDatabase.getInstance().getReference("User Avatar");
+            databaseReference3 = FirebaseDatabase.getInstance().getReference("Post Comments");
         }
     }
 }

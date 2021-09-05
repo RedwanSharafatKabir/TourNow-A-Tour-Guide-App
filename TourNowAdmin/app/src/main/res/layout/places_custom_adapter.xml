@@ -103,6 +103,39 @@
 
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/deleteId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_delete"
+                    android:gravity="center"
+                    android:text=" Delete"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:layout_marginRight="25dp"/>
+
+                <TextView
+                    android:id="@+id/editId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/deleteId"
+                    android:drawableLeft="@drawable/ic_baseline_edit_24"
+                    android:gravity="center"
+                    android:text=" Edit"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

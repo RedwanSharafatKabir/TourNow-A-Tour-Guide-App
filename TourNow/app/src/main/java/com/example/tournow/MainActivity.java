@@ -385,7 +385,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             }
 
             if(theme.equals("dark")){
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
             }
 
         }

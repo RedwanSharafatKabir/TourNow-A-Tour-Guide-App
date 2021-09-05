@@ -259,8 +259,10 @@ public class NewsfeedFragment extends Fragment implements View.OnClickListener{
     }
 
     private void storePostData(String postText, String userName, String imageUrl, String videoUrl){
-        StorePostInfo storePostInfo = new StorePostInfo(userPhone, userName, postText, 0, imageUrl, videoUrl);
-        databaseReference.child(userPhone).push().setValue(storePostInfo);
+        String postToken = String.valueOf(System.currentTimeMillis());
+
+        StorePostInfo storePostInfo = new StorePostInfo(userPhone, userName, postText, 0, imageUrl, videoUrl, postToken);
+        databaseReference.child(userPhone).child(postToken).setValue(storePostInfo);
         Toast.makeText(getActivity(), "Post Published", Toast.LENGTH_SHORT).show();
         progressBar.setVisibility(View.GONE);
     }

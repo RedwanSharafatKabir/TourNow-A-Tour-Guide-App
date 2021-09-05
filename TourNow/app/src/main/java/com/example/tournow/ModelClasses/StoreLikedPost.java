@@ -7,14 +7,16 @@ public class StoreLikedPost {
     String imageUrl;
     String videoUrl;
     String postUserPhone;
+    String postToken;
 
-    public StoreLikedPost(String userPhone, String postText, boolean liked, String imageUrl, String videoUrl, String postUserPhone) {
+    public StoreLikedPost(String userPhone, String postText, boolean liked, String imageUrl, String videoUrl, String postUserPhone, String postToken) {
         this.userPhone = userPhone;
         this.postText = postText;
         this.liked = liked;
         this.imageUrl = imageUrl;
         this.videoUrl = videoUrl;
         this.postUserPhone = postUserPhone;
+        this.postToken = postToken;
     }
 
     public StoreLikedPost() {
@@ -66,5 +68,13 @@ public class StoreLikedPost {
 
     public void setPostUserPhone(String postUserPhone) {
         this.postUserPhone = postUserPhone;
+    }
+
+    public String getPostToken() {
+        return postToken;
+    }
+
+    public void setPostToken(String postToken) {
+        this.postToken = postToken;
     }
 }

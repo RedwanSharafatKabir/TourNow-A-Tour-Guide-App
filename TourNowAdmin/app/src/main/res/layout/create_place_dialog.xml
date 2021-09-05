@@ -148,7 +148,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 android:gravity="center">
 
@@ -172,7 +172,7 @@
                 android:layout_height="wrap_content"
                 app:cardElevation="5dp"
                 app:cardCornerRadius="5dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:layout_gravity="center"
                 android:layout_marginBottom="5dp">
 

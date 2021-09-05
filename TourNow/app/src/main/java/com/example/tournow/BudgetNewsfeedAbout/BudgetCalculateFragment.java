@@ -141,15 +141,15 @@ public class BudgetCalculateFragment extends Fragment implements View.OnClickLis
                 Toast.makeText(getActivity(), "You must enter valid info", Toast.LENGTH_SHORT).show();
             }
 
-            if(!(divisionValue.equals("Barisal") || divisionValue.equals("বরিশাল")) &&
-                    (transportValue.equals("Launch (Single Cabin)") || transportValue.equals("Launch (Double Cabin)")) ||
+            if( !divisionValue.equals("Barisal") && !divisionValue.equals("বরিশাল") &&
+                    ((transportValue.equals("Launch (Single Cabin)") || transportValue.equals("Launch (Double Cabin)")) ||
                     (transportValue.equals("Launch (Dake)") || transportValue.equals("লঞ্চ (সিঙ্গেল কেবিন)")) ||
-                    (transportValue.equals("লঞ্চ (ডাবল কেবিন)") || transportValue.equals("লঞ্চ (ডেক)"))){
+                    (transportValue.equals("লঞ্চ (ডাবল কেবিন)") || transportValue.equals("লঞ্চ (ডেক)")))){
 
                 Toast.makeText(getActivity(), "You can travel only Barisal by launch", Toast.LENGTH_SHORT).show();
             }
 
-            else if (!totalPersonValue.equals("") || !totalDaysValue.equals("")){
+            else if (!totalPersonValue.equals("") && !totalDaysValue.equals("")){
                 int persons = Integer.parseInt(totalPersonValue);
                 int days = Integer.parseInt(totalDaysValue);
                 basicCost = breakfast + lunch + snacks + dinner;

@@ -8,14 +8,16 @@ public class StorePostInfo {
     int likeNumbers;
     String imageUrl;
     String videoUrl;
+    String postToken;
 
-    public StorePostInfo(String userPhone, String name, String post, int likeNumbers, String imageUrl, String videoUrl) {
+    public StorePostInfo(String userPhone, String name, String post, int likeNumbers, String imageUrl, String videoUrl, String postToken) {
         this.userPhone = userPhone;
         this.name = name;
         this.post = post;
         this.likeNumbers = likeNumbers;
         this.imageUrl = imageUrl;
         this.videoUrl = videoUrl;
+        this.postToken = postToken;
     }
 
     public StorePostInfo() {
@@ -67,5 +69,13 @@ public class StorePostInfo {
 
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
+    }
+
+    public String getPostToken() {
+        return postToken;
+    }
+
+    public void setPostToken(String postToken) {
+        this.postToken = postToken;
     }
 }

@@ -166,7 +166,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
             if(lang.equals("en")){
                 changeLangBtn.setText(" Change Language");
                 themeText.setText("App Theme");
-                darkText.setText("Dark Mode");
+                darkText.setText("Default Mode");
                 lightText.setText("Light Mode");
                 ((MainActivity) getActivity()).toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
                 setNavigationItemsName();
@@ -174,7 +174,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
             } else if(lang.equals("bn")){
                 changeLangBtn.setText(" ভাষা পরিবর্তন করুন");
                 themeText.setText("থিম পরিবর্তন করুন");
-                darkText.setText("ডার্ক মোড");
+                darkText.setText("ডিফল্ট মোড");
                 lightText.setText("লাইট মোড");
                 ((MainActivity) getActivity()).toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
                 setNavigationItemsName();
@@ -261,7 +261,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
                             fileOutputStream.write(temp.getBytes());
                             fileOutputStream.close();
 
-                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
                             getActivity().finish();
                             Intent intent = new Intent(getActivity(), MainActivity.class);

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/drawable/button_background.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/drawable/ic_baseline_delete.xml" value="0.22552083333333334" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/drawable/ic_baseline_edit_24.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/drawable/ic_baseline_logout.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/drawable/ic_email.xml" value="0.22552083333333334" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/font/font.xml" value="0.23958333333333334" />
@@ -12,8 +14,9 @@
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/create_place_dialog.xml" value="0.22" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/district_spinner_adapter.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/division_spinner_adapter.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/edit_place.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
-        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/places_custom_adapter.xml" value="0.209375" />
+        <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/places_custom_adapter.xml" value="0.22" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/layout/plaes_spinner_adapter.xml" value="0.209375" />
         <entry key="..\:/Users/Redwan/OneDrive/Desktop/TourNowAdmin/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11614583333333334" />
       </map>

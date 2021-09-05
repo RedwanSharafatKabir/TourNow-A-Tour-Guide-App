@@ -49,7 +49,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
     TextView nametext, postText, likedPeople;
     ImageView likeBtn, postImage, deletePost, backPage, sendComment;
     String postUserName, postDescription, postLikesCount, postUserPhone;
-    String postImageUrl, postVideoUrl, userPhone, postTokenKey;
+    String postImageUrl, postVideoUrl, userPhone, postToken;
     DatabaseReference databaseReference1, databaseReference2, databaseReference3;
 
     @Override
@@ -81,7 +81,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
         postUserPhone = it.getStringExtra("postOwnerPhone_key");
         postLikesCount = it.getStringExtra("postLikes_key");
         postVideoUrl = it.getStringExtra("postVideoUrl_key");
-        postTokenKey = it.getStringExtra("postIdentity_key");
+        postToken = it.getStringExtra("postIdentity_key");
         count = Integer.parseInt(postLikesCount);
 
         if(postImageUrl.equals("No_Image")){
@@ -129,7 +129,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
 
     private void showCommentData(){
         try {
-            databaseReference3.child(postUserPhone).child(postTokenKey).addValueEventListener(new ValueEventListener() {
+            databaseReference3.child(postUserPhone).child(postToken).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     storeCommentDataArrayList.clear();
@@ -218,10 +218,10 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
 
                                         } catch (Exception e){
                                             storePostData(snapshot.getKey(), postDescription, postUserName,
-                                                    postUserPhone, (count+1), postImageUrl, postVideoUrl);
+                                                    postUserPhone, (count+1), postImageUrl, postVideoUrl, postToken);
 
                                             storeLikedData(userPhone, snapshot.getKey(), postDescription, true, postImageUrl,
-                                                    postVideoUrl, postUserPhone);
+                                                    postVideoUrl, postUserPhone, postToken);
 
                                             likedPeople.setText(String.valueOf(count+1));
                                         }
@@ -258,7 +258,7 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
                                         @Override
                                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                                             String commenterName = snapshot.getValue().toString();
-                                            storeCommentMethod(postUserPhone, postTokenKey, userPhone, commenterName, commentText);
+                                            storeCommentMethod(postUserPhone, postToken, userPhone, commenterName, commentText);
                                         }
 
                                         @Override
@@ -278,13 +278,13 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
         }
     }
 
-    private void storeCommentMethod(String postUserPhone, String postKey, String commenterPhone, String commenterName, String commentText){
+    private void storeCommentMethod(String postUserPhone, String postToken, String commenterPhone, String commenterName, String commentText){
         StoreCommentData storeCommentData = new StoreCommentData(commenterPhone, commenterName, commentText);
-        databaseReference3.child(postUserPhone).child(postKey).child(userPhone).child(commentText).setValue(storeCommentData);
+        databaseReference3.child(postUserPhone).child(postToken).child(userPhone).child(commentText).setValue(storeCommentData);
         writeComment.setText("");
     }
 
-    private void deletePostMethod(String userPhone, String postKey){
+    private void deletePostMethod(String userPhone, String postToken){
         AlertDialog.Builder alertDialogBuilder;
         alertDialogBuilder = new AlertDialog.Builder(ParticularPostActivity.this);
         alertDialogBuilder.setMessage("Do you want to delete this post ?");
@@ -294,8 +294,9 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try{
-                    databaseReference1.child(userPhone).child(postKey).removeValue();
-                    databaseReference2.child(userPhone).child(postKey).removeValue();
+                    databaseReference1.child(userPhone).child(postToken).removeValue();
+                    databaseReference2.child(userPhone).child(postToken).removeValue();
+                    databaseReference3.child(userPhone).child(postToken).removeValue();
 
                     finish();
                     Intent intent = new Intent(ParticularPostActivity.this, MainActivity.class);
@@ -321,15 +322,15 @@ public class ParticularPostActivity extends AppCompatActivity implements View.On
     }
 
     private void storeLikedData(String userPhone, String targetKey, String postText, boolean liked,
-                                String imageUrl, String videoUrl, String postUserPhone){
+                                String imageUrl, String videoUrl, String postUserPhone, String postToken){
 
-        StoreLikedPost storeLikedPost = new StoreLikedPost(userPhone, postText, liked, imageUrl, videoUrl, postUserPhone);
+        StoreLikedPost storeLikedPost = new StoreLikedPost(userPhone, postText, liked, imageUrl, videoUrl, postUserPhone, postToken);
         databaseReference2.child(userPhone).child(targetKey).setValue(storeLikedPost);
     }
 
     private void storePostData(String targetKey, String postText, String userName, String postUserPhone,
-                               int count,  String imageUrl, String videoUrl){
-        StorePostInfo storePostInfo = new StorePostInfo(postUserPhone, userName, postText, count, imageUrl, videoUrl);
+                               int count,  String imageUrl, String videoUrl, String postToken){
+        StorePostInfo storePostInfo = new StorePostInfo(postUserPhone, userName, postText, count, imageUrl, videoUrl, postToken);
         databaseReference1.child(postUserPhone).child(targetKey).setValue(storePostInfo);
     }
 

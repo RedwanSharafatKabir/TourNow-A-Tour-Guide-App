@@ -6,16 +6,16 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -57,6 +57,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfilePopup extends AppCompatDialogFragment implements View.OnClickListener{
 
+    ImageView emailImg, nameImg;
     ProgressBar progressBar;
     View views;
     TextView txtclose, profilename, profileemail;
@@ -87,11 +88,17 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         progressBar = views.findViewById(R.id.profileProgressBarId);
         txtclose =(TextView) views.findViewById(R.id.txtclose);
         profilename = (TextView) views.findViewById(R.id.pro_name);
+        profilename.setOnClickListener(this);
         profileemail = (TextView) views.findViewById(R.id.pro_email);
+        profileemail.setOnClickListener(this);
         buttonlogout = (Button) views.findViewById(R.id.log_out);
         buttonpasswordchange = (Button) views.findViewById(R.id.change_password);
         profileImage = views.findViewById(R.id.profile_image);
         profileImage.setOnClickListener(this);
+        emailImg = views.findViewById(R.id.editEmailImg);
+        emailImg.setOnClickListener(this);
+        nameImg = views.findViewById(R.id.editNameImg);
+        nameImg.setOnClickListener(this);
 
         imageReference = FirebaseDatabase.getInstance().getReference("User Avatar");
 
@@ -105,6 +112,19 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         getProfileInfo();
 
         return builder.create();
+    }
+
+    private void refresh(int milliSecond){
+        final Handler handler = new Handler(Looper.getMainLooper());
+
+        final Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                getProfileInfo();
+            }
+        };
+
+        handler.postDelayed(runnable, milliSecond);
     }
 
     private void getProfileInfo(){
@@ -220,6 +240,8 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
                 .show();
             }
         });
+
+        refresh(1000);
     }
 
     private void logoutApp(){
@@ -273,6 +295,30 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
 
     @Override
     public void onClick(View v) {
+        if(v.getId()==R.id.pro_name || v.getId()==R.id.editNameImg){
+            String userName = profilename.getText().toString();
+            String userEmail = profileemail.getText().toString();
+
+            Bundle armgs = new Bundle();
+            armgs.putString("name_key", userName);
+            armgs.putString("email_key", userEmail);
+
+            ResetName resetName = new ResetName();
+            resetName.setArguments(armgs);
+            resetName.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+        }
+
+        if(v.getId()==R.id.pro_email || v.getId()==R.id.editEmailImg){
+            String userEmail = profileemail.getText().toString();
+
+            Bundle armgs = new Bundle();
+            armgs.putString("email_key", userEmail);
+
+            ResetEmail resetEmail = new ResetEmail();
+            resetEmail.setArguments(armgs);
+            resetEmail.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+        }
+
         if(v.getId()==R.id.profile_image){
             someActivityResultLauncher.launch("image/*");
         }

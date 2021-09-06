@@ -38,6 +38,12 @@
     <string name="type_comment">Type a comment</string>
     <string name="budget_calculator">Budget Calculator</string>
 
+    <string name="text_name_old"> Enter previous username</string>
+    <string name="text_name_new"> Enter new username</string>
+    <string name="text_no">No</string>
+    <string name="text_reset">Reset</string>
+    <string name="text_email_old"> Enter previous email</string>
+    <string name="text_email_new"> Enter new email</string>
     <string name="text_setting">App Theme</string>
     <string name="text_dark">Default Mode</string>
     <string name="text_light">Light Mode</string>

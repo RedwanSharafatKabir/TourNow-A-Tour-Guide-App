@@ -38,6 +38,12 @@
     <string name="type_comment">কমেন্ট করুন</string>
     <string name="budget_calculator">বাজেট ক্যালকুলেটর</string>
 
+    <string name="text_name_old"> পুরাতন নাম দিন</string>
+    <string name="text_name_new"> নতুন নাম দিন</string>
+    <string name="text_no">না</string>
+    <string name="text_reset">রিসেট</string>
+    <string name="text_email_old"> পুরাতন ইমেইল দিন</string>
+    <string name="text_email_new"> নতুন ইমেইল দিন</string>
     <string name="text_setting">থিম পরিবর্তন করুন</string>
     <string name="text_dark">ডিফল্ট মোড</string>
     <string name="text_light">লাইট মোড</string>

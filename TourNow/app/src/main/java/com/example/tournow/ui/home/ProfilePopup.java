@@ -13,10 +13,12 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,11 @@ import com.example.tournow.LoginActivity;
 import com.example.tournow.MainActivity;
 import com.example.tournow.ModelClasses.StoreUserImage;
 import com.example.tournow.R;
+import com.example.tournow.RecyclerViewAdapters.DivisionSpinnerAdapter;
+import com.example.tournow.RecyclerViewAdapters.HotelSpinnerAdapter;
+import com.example.tournow.RecyclerViewAdapters.NameEmailSpinnerAdapter;
+import com.example.tournow.RecyclerViewAdapters.PlacesSpinnerAdapter;
+import com.example.tournow.RecyclerViewAdapters.TransportSpinnerAdapter;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -57,7 +64,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProfilePopup extends AppCompatDialogFragment implements View.OnClickListener{
 
-    ImageView emailImg, nameImg;
     ProgressBar progressBar;
     View views;
     TextView txtclose, profilename, profileemail;
@@ -72,6 +78,9 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
     StorageReference storageReference;
     ProgressDialog dialog;
     Uri uriProfileImage;
+    String namesEmails[];
+    Spinner nameEmailSpinner;
+    NameEmailSpinnerAdapter nameEmailSpinnerAdapter;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -95,10 +104,12 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         buttonpasswordchange = (Button) views.findViewById(R.id.change_password);
         profileImage = views.findViewById(R.id.profile_image);
         profileImage.setOnClickListener(this);
-        emailImg = views.findViewById(R.id.editEmailImg);
-        emailImg.setOnClickListener(this);
-        nameImg = views.findViewById(R.id.editNameImg);
-        nameImg.setOnClickListener(this);
+
+        namesEmails = getResources().getStringArray(R.array.name_email_array);
+        nameEmailSpinner = views.findViewById(R.id.nameEmailSpinnerId);
+        nameEmailSpinnerAdapter = new NameEmailSpinnerAdapter(getActivity(), namesEmails);
+        nameEmailSpinner.setAdapter(nameEmailSpinnerAdapter);
+        getSpinnerValue();
 
         imageReference = FirebaseDatabase.getInstance().getReference("User Avatar");
 
@@ -112,6 +123,41 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         getProfileInfo();
 
         return builder.create();
+    }
+
+    private void getSpinnerValue() {
+        nameEmailSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String value = namesEmails[position];
+
+                if(value.equals("Username") || value.equals("নাম")){
+                    String userName = profilename.getText().toString();
+                    String userEmail = profileemail.getText().toString();
+
+                    Bundle armgs = new Bundle();
+                    armgs.putString("name_key", userName);
+                    armgs.putString("email_key", userEmail);
+
+                    ResetName resetName = new ResetName();
+                    resetName.setArguments(armgs);
+                    resetName.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+                }
+
+                if(value.equals("Email") || value.equals("ইমেইল")){
+                    String userEmail = profileemail.getText().toString();
+
+                    Bundle armgs = new Bundle();
+                    armgs.putString("email_key", userEmail);
+
+                    ResetEmail resetEmail = new ResetEmail();
+                    resetEmail.setArguments(armgs);
+                    resetEmail.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
     }
 
     private void refresh(int milliSecond){
@@ -295,30 +341,6 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        if(v.getId()==R.id.pro_name || v.getId()==R.id.editNameImg){
-            String userName = profilename.getText().toString();
-            String userEmail = profileemail.getText().toString();
-
-            Bundle armgs = new Bundle();
-            armgs.putString("name_key", userName);
-            armgs.putString("email_key", userEmail);
-
-            ResetName resetName = new ResetName();
-            resetName.setArguments(armgs);
-            resetName.show(getActivity().getSupportFragmentManager(), "Sample dialog");
-        }
-
-        if(v.getId()==R.id.pro_email || v.getId()==R.id.editEmailImg){
-            String userEmail = profileemail.getText().toString();
-
-            Bundle armgs = new Bundle();
-            armgs.putString("email_key", userEmail);
-
-            ResetEmail resetEmail = new ResetEmail();
-            resetEmail.setArguments(armgs);
-            resetEmail.show(getActivity().getSupportFragmentManager(), "Sample dialog");
-        }
-
         if(v.getId()==R.id.profile_image){
             someActivityResultLauncher.launch("image/*");
         }

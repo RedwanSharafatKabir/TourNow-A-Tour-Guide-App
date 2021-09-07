@@ -71,6 +71,12 @@
     <string name="hotel_text"> Hotel</string>
     <string name="total_days"> Total Days</string>
 
+    <string-array name="name_email_array">
+        <item>Setings</item>
+        <item>Username</item>
+        <item>Email</item>
+    </string-array>
+
     <string-array name="division_array">
         <item>Division</item>
         <item>Dhaka</item>

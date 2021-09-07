@@ -38,6 +38,12 @@
     <string name="type_comment">কমেন্ট করুন</string>
     <string name="budget_calculator">বাজেট ক্যালকুলেটর</string>
 
+    <string-array name="name_email_array">
+        <item>সেটিংস</item>
+        <item>নাম</item>
+        <item>ইমেইল</item>
+    </string-array>
+
     <string name="text_name_old"> পুরাতন নাম দিন</string>
     <string name="text_name_new"> নতুন নাম দিন</string>
     <string name="text_no">না</string>

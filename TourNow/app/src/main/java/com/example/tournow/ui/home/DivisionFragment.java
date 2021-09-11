@@ -38,7 +38,13 @@ public class DivisionFragment extends Fragment {
         netInfo = cm.getActiveNetworkInfo();
 
         gridLayout = (GridLayout) views.findViewById(R.id.division_gridlayout);
-        gridLayoutevent(gridLayout);
+
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            gridLayoutevent(gridLayout);
+        }
+        else {
+            Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+        }
 
         return views;
     }
@@ -49,8 +55,7 @@ public class DivisionFragment extends Fragment {
             cardView = (CardView)gridLayout.getChildAt(i);
             final int finalI = i;
 
-            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
-                cardView.setOnClickListener(new View.OnClickListener() {
+            cardView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         if (finalI == 0) {
@@ -102,13 +107,6 @@ public class DivisionFragment extends Fragment {
                         }
                     }
                 });
-
-            }
-
-            else {
-                Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
-            }
-
         }
     }
 }

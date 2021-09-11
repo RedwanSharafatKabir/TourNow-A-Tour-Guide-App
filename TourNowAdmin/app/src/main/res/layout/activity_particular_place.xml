@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    tool:context=".ParticularPlaceActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#E8E8E8"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+
+            <ImageView
+                android:id="@+id/placesImageId2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutId1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/placeNameId1"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Place Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/divisionId1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Division"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/districtId1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="District"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeTypeId1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeDetailsId1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/placeGuideId1"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:text="Place Guide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

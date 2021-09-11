@@ -11,10 +11,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TourNow">
-
-        <activity android:name=".ui.home.PlaceListByDistrict"
+        <activity
+            android:name=".ui.home.ParticularPlaceActivity"
             android:exported="true" />
-        <activity android:name=".ui.home.PlaceListByPlaceType"
+        <activity
+            android:name=".ui.home.PlaceListByDistrict"
+            android:exported="true" />
+        <activity
+            android:name=".ui.home.PlaceListByPlaceType"
             android:exported="true" />
         <activity
             android:name=".BudgetNewsfeedAbout.ParticularPostActivity"
@@ -47,7 +51,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.TourNow.NoActionBar"></activity>
+            android:theme="@style/Theme.TourNow.NoActionBar" />
     </application>
 
 </manifest>

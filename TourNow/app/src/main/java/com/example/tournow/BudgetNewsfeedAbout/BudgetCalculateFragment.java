@@ -141,15 +141,25 @@ public class BudgetCalculateFragment extends Fragment implements View.OnClickLis
                 Toast.makeText(getActivity(), "You must enter valid info", Toast.LENGTH_SHORT).show();
             }
 
-            if( !divisionValue.equals("Barisal") && !divisionValue.equals("বরিশাল") &&
+            if( !divisionValue.equals("Barisal") && !divisionValue.equals("বরিশাল") && !divisionValue.equals("Dhaka") && !divisionValue.equals("ঢাকা")
+                    && !divisionValue.equals("Chittagong") && !divisionValue.equals("চট্টগ্রাম") &&
                     ((transportValue.equals("Launch (Single Cabin)") || transportValue.equals("Launch (Double Cabin)")) ||
                     (transportValue.equals("Launch (Dake)") || transportValue.equals("লঞ্চ (সিঙ্গেল কেবিন)")) ||
                     (transportValue.equals("লঞ্চ (ডাবল কেবিন)") || transportValue.equals("লঞ্চ (ডেক)")))){
 
-                Toast.makeText(getActivity(), "You can travel only Barisal by launch", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "You can't travel " + divisionValue + " by launch", Toast.LENGTH_SHORT).show();
             }
 
-            else if (!totalPersonValue.equals("") && !totalDaysValue.equals("")){
+            if((divisionValue.equals("Mymensingh") || divisionValue.equals("ময়মনসিংহ")) &&
+                    ((transportValue.equals("Airlines (Any)") || transportValue.equals("প্লেন (যেকোন)")))){
+
+                Toast.makeText(getActivity(), "You can't travel " + divisionValue + " by plane", Toast.LENGTH_SHORT).show();
+            }
+
+            else if (!placesValue.equals("Place") && !divisionValue.equals("Division") && !transportValue.equals("Transport") && !hotelValue.equals("Hotel")
+                    && !placesValue.equals("স্থান") && !divisionValue.equals("বিভাগ") && !transportValue.equals("যানবাহন") && !hotelValue.equals("হোটেল") &&
+                    !totalPersonValue.equals("") && !totalDaysValue.equals("")){
+
                 int persons = Integer.parseInt(totalPersonValue);
                 int days = Integer.parseInt(totalDaysValue);
                 basicCost = breakfast + lunch + snacks + dinner;

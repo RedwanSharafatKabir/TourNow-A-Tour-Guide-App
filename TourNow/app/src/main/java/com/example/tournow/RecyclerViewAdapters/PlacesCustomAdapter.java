@@ -1,6 +1,8 @@
 package com.example.tournow.RecyclerViewAdapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +12,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tournow.BudgetNewsfeedAbout.ParticularPostActivity;
 import com.example.tournow.ModelClasses.StorePlaceData;
 import com.example.tournow.R;
+import com.example.tournow.ui.home.ParticularPlaceActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -47,11 +51,26 @@ public class PlacesCustomAdapter extends RecyclerView.Adapter<PlacesCustomAdapte
         holder.textView1.setText(placeName);
         holder.textView2.setText("Division: " + division);
         holder.textView3.setText("Place Type: " + placeType);
-        holder.textView4.setText("Descrption: " + description);
-        holder.textView5.setText("Tour Guide: " + guideInfo);
         holder.textView6.setText("District: " + district);
 
         Picasso.get().load(imageUrl).into(holder.placeImage);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(context, ParticularPlaceActivity.class);
+                it.putExtra("placeName_key", placeName);
+                it.putExtra("division_key", division);
+                it.putExtra("placeType_key", placeType);
+                it.putExtra("description_key", description);
+                it.putExtra("guideInfo_key", guideInfo);
+                it.putExtra("imageUrl_key", imageUrl);
+                it.putExtra("district_key", district);
+                context.startActivity(it);
+
+                Log.i("Open_particular_place_page ", "Why man why");
+            }
+        });
     }
 
     @Override
@@ -60,19 +79,17 @@ public class PlacesCustomAdapter extends RecyclerView.Adapter<PlacesCustomAdapte
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textView1, textView2, textView3, textView4, textView5, textView6;
+        TextView textView1, textView2, textView3, textView6;
         ImageView placeImage;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
-            placeImage = itemView.findViewById(R.id.guardianImageId);
+            placeImage = itemView.findViewById(R.id.placesImageId1);
 
             textView1 = itemView.findViewById(R.id.placeNameId);
             textView2 = itemView.findViewById(R.id.divisionId);
             textView3 = itemView.findViewById(R.id.placeTypeId);
-            textView4 = itemView.findViewById(R.id.placeDetailsId);
-            textView5 = itemView.findViewById(R.id.placeGuideId);
             textView6 = itemView.findViewById(R.id.districtId);
         }
     }

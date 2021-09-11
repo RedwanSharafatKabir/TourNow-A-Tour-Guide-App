@@ -36,13 +36,14 @@ public class PlaceListByDistrict extends AppCompatActivity implements View.OnCli
     RecyclerView recyclerView;
     ArrayList<StorePlaceData> storePlaceDataArrayList;
     PlacesCustomAdapter placesCustomAdapter;
+    Parcelable recyclerViewState;
     ProgressBar progressBar;
     DatabaseReference databaseReference;
-    Parcelable recyclerViewState;
     ConnectivityManager cm;
     NetworkInfo netInfo;
     String messageDiv, messageDist;
     ImageView backPage;
+    TextView districtName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,61 +67,63 @@ public class PlaceListByDistrict extends AppCompatActivity implements View.OnCli
         storePlaceDataArrayList = new ArrayList<StorePlaceData>();
         databaseReference = FirebaseDatabase.getInstance().getReference("Travel Places");
 
+        districtName = findViewById(R.id.districtNameId);
+
         Intent it = getIntent();
         messageDiv = it.getStringExtra("division_key");
         messageDist = it.getStringExtra("district_key");
 
-        showParks();
+        districtName.setText(messageDist);
+
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            showParks();
+
+        } else {
+            Toast.makeText(PlaceListByDistrict.this, "Turn on internet connection", Toast.LENGTH_LONG).show();
+            progressBar.setVisibility(View.GONE);
+        }
 
         backPage = findViewById(R.id.backPageId2);
         backPage.setOnClickListener(this);
     }
 
     private void showParks() {
-        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+        try {
+            databaseReference.child(messageDiv).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    storePlaceDataArrayList.clear();
 
-            try {
-                databaseReference.child(messageDiv).addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        storePlaceDataArrayList.clear();
-
-                        for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                            try {
-                                if (messageDist.equals(dataSnapshot.getKey())) {
-                                    for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                                        for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
-                                            StorePlaceData storePlaceData = dataSnapshot2.getValue(StorePlaceData.class);
-                                            storePlaceDataArrayList.add(storePlaceData);
-                                        }
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        try {
+                            if (messageDist.equals(dataSnapshot.getKey())) {
+                                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
+                                    for (DataSnapshot dataSnapshot2 : dataSnapshot1.getChildren()) {
+                                        StorePlaceData storePlaceData = dataSnapshot2.getValue(StorePlaceData.class);
+                                        storePlaceDataArrayList.add(storePlaceData);
                                     }
                                 }
-                            } catch (Exception e){
-                                Log.i("Error_Db ", e.getMessage());
                             }
+                        } catch (Exception e){
+                            Log.i("Error_Db ", e.getMessage());
                         }
-
-                        placesCustomAdapter = new PlacesCustomAdapter(PlaceListByDistrict.this, storePlaceDataArrayList);
-                        recyclerView.setAdapter(placesCustomAdapter);
-                        placesCustomAdapter.notifyDataSetChanged();
-                        recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
-
-                        progressBar.setVisibility(View.GONE);
                     }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
-                        progressBar.setVisibility(View.GONE);
-                    }
-                });
-            } catch (Exception e){
-                Log.i("Error_Db ", e.getMessage());
-            }
-        }
+                    placesCustomAdapter = new PlacesCustomAdapter(PlaceListByDistrict.this, storePlaceDataArrayList);
+                    recyclerView.setAdapter(placesCustomAdapter);
+                    placesCustomAdapter.notifyDataSetChanged();
+                    recyclerView.getLayoutManager().onRestoreInstanceState(recyclerViewState);
 
-        else {
-            Toast.makeText(PlaceListByDistrict.this, "Turn on internet connection", Toast.LENGTH_LONG).show();
-            progressBar.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    progressBar.setVisibility(View.GONE);
+                }
+            });
+        } catch (Exception e){
+            Log.i("Error_Db ", e.getMessage());
         }
     }
 

@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         try {
         setContentView(R.layout.activity_main);
 
-        checkTheme();
+//        checkTheme();
         checkLangTheme();
 
         toolBarText = findViewById(R.id.setToolBarTextId);
@@ -368,33 +368,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    private void checkTheme(){
-        try {
-            String recievedMessageTc;
-            FileInputStream fileInputStreamTc = openFileInput("Setting_Theme.txt");
-            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
-            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
-            StringBuffer stringBufferTc = new StringBuffer();
-
-            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
-                stringBufferTc.append(recievedMessageTc);
-            }
-
-            String theme = stringBufferTc.toString();
-
-            if(theme.equals("light")){
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            }
-
-            if(theme.equals("dark")){
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            }
-
-        }
-        catch (Exception e) {
-            Log.i("Error ", e.getMessage());
-        }
-    }
+//    private void checkTheme(){
+//        try {
+//            String recievedMessageTc;
+//            FileInputStream fileInputStreamTc = openFileInput("Setting_Theme.txt");
+//            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
+//            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
+//            StringBuffer stringBufferTc = new StringBuffer();
+//
+//            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
+//                stringBufferTc.append(recievedMessageTc);
+//            }
+//
+//            String theme = stringBufferTc.toString();
+//
+//            if(theme.equals("light")){
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//            }
+//
+//            if(theme.equals("dark")){
+//                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//            }
+//
+//        }
+//        catch (Exception e) {
+//            Log.i("Error ", e.getMessage());
+//        }
+//    }
 
     @Override
     public void onBackPressed() {

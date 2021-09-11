@@ -20,6 +20,16 @@
             android:layout_gravity="center|left"
             android:layout_marginLeft="15dp"/>
 
+        <TextView
+            android:id="@+id/typeNameId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp" />
+
     </LinearLayout>
 
     <ProgressBar
@@ -33,6 +43,7 @@
         android:id="@+id/placeRecyclerViewByTypeId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"/>
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
 
 </LinearLayout>

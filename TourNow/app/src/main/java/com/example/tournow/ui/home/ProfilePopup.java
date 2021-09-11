@@ -6,6 +6,8 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -81,6 +83,8 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
     String namesEmails[];
     Spinner nameEmailSpinner;
     NameEmailSpinnerAdapter nameEmailSpinnerAdapter;
+    ConnectivityManager cm;
+    NetworkInfo netInfo;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -89,6 +93,8 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         views = inflater.inflate(R.layout.profile_popup, null);
         builder.setView(views).setCancelable(false);
 
+        cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        netInfo = cm.getActiveNetworkInfo();
         dialog = new ProgressDialog(getActivity());
         firebaseAuth = FirebaseAuth.getInstance();
         user = firebaseAuth.getCurrentUser();
@@ -120,7 +126,12 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
             }
         });
 
-        getProfileInfo();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            getProfileInfo();
+        } else {
+            Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.GONE);
+        }
 
         return builder.create();
     }
@@ -129,30 +140,35 @@ public class ProfilePopup extends AppCompatDialogFragment implements View.OnClic
         nameEmailSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String value = namesEmails[position];
+                if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                    String value = namesEmails[position];
 
-                if(value.equals("Username") || value.equals("নাম")){
-                    String userName = profilename.getText().toString();
-                    String userEmail = profileemail.getText().toString();
+                    if(value.equals("Username") || value.equals("নাম")){
+                        String userName = profilename.getText().toString();
+                        String userEmail = profileemail.getText().toString();
 
-                    Bundle armgs = new Bundle();
-                    armgs.putString("name_key", userName);
-                    armgs.putString("email_key", userEmail);
+                        Bundle armgs = new Bundle();
+                        armgs.putString("name_key", userName);
+                        armgs.putString("email_key", userEmail);
 
-                    ResetName resetName = new ResetName();
-                    resetName.setArguments(armgs);
-                    resetName.show(getActivity().getSupportFragmentManager(), "Sample dialog");
-                }
+                        ResetName resetName = new ResetName();
+                        resetName.setArguments(armgs);
+                        resetName.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+                    }
 
-                if(value.equals("Email") || value.equals("ইমেইল")){
-                    String userEmail = profileemail.getText().toString();
+                    if(value.equals("Email") || value.equals("ইমেইল")){
+                        String userEmail = profileemail.getText().toString();
 
-                    Bundle armgs = new Bundle();
-                    armgs.putString("email_key", userEmail);
+                        Bundle armgs = new Bundle();
+                        armgs.putString("email_key", userEmail);
 
-                    ResetEmail resetEmail = new ResetEmail();
-                    resetEmail.setArguments(armgs);
-                    resetEmail.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+                        ResetEmail resetEmail = new ResetEmail();
+                        resetEmail.setArguments(armgs);
+                        resetEmail.show(getActivity().getSupportFragmentManager(), "Sample dialog");
+                    }
+
+                } else {
+                    progressBar.setVisibility(View.GONE);
                 }
             }
             @Override

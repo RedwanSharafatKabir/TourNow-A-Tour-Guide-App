@@ -44,7 +44,7 @@
     <string name="text_reset">Reset</string>
     <string name="text_email_old"> Enter previous email</string>
     <string name="text_email_new"> Enter new email</string>
-    <string name="text_setting">App Theme</string>
+    <string name="text_setting">App Language</string>
     <string name="text_dark">Default Mode</string>
     <string name="text_light">Light Mode</string>
     <string name="text_english">English</string>
@@ -70,9 +70,11 @@
     <string name="transport_text"> Transport</string>
     <string name="hotel_text"> Hotel</string>
     <string name="total_days"> Total Days</string>
+    <string name="enter_place"> Search place by district</string>
+    <string name="search_place"> Search</string>
 
     <string-array name="name_email_array">
-        <item>Setings</item>
+        <item>Settings</item>
         <item>Username</item>
         <item>Email</item>
     </string-array>

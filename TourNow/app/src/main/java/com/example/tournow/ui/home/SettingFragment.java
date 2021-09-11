@@ -48,10 +48,10 @@ import java.util.Locale;
 
 public class SettingFragment extends Fragment implements View.OnClickListener{
 
-    Switch darkSwitch, lightSwitch;
+//    Switch darkSwitch, lightSwitch;
     View views;
     String language = "", temp;
-    TextView changeLangBtn, themeText, darkText, lightText;
+    TextView changeLangBtn, themeText;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -59,64 +59,64 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
 
         views = inflater.inflate(R.layout.fragment_setting, container, false);
 
-        darkSwitch = views.findViewById(R.id.darkSwitchId);
-        lightSwitch = views.findViewById(R.id.lightSwitchId);
+//        darkSwitch = views.findViewById(R.id.darkSwitchId);
+//        lightSwitch = views.findViewById(R.id.lightSwitchId);
 
-        try {
-            String recievedMessageTc;
-            FileInputStream fileInputStreamTc = getActivity().openFileInput("Setting_Theme.txt");
-            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
-            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
-            StringBuffer stringBufferTc = new StringBuffer();
-
-            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
-                stringBufferTc.append(recievedMessageTc);
-            }
-
-            String theme = stringBufferTc.toString();
-
-            if(theme.equals("light")){
-                lightSwitch.setChecked(true);
-                temp = "light";
-
-                try {
-                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
-                    fileOutputStream.write(temp.getBytes());
-                    fileOutputStream.close();
-                }
-                catch (Exception e) {
-                    Log.i("Error ", e.getMessage());
-                }
-            }
-
-            if(theme.equals("dark")){
-                darkSwitch.setChecked(true);
-                temp = "dark";
-
-                try {
-                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
-                    fileOutputStream.write(temp.getBytes());
-                    fileOutputStream.close();
-                }
-                catch (Exception e) {
-                    Log.i("Error ", e.getMessage());
-                }
-            }
-
-        }
-        catch (Exception e) {
-            Log.i("Error ", e.getMessage());
-        }
+//        try {
+//            String recievedMessageTc;
+//            FileInputStream fileInputStreamTc = getActivity().openFileInput("Setting_Theme.txt");
+//            InputStreamReader inputStreamReaderTc = new InputStreamReader(fileInputStreamTc);
+//            BufferedReader bufferedReaderTc = new BufferedReader(inputStreamReaderTc);
+//            StringBuffer stringBufferTc = new StringBuffer();
+//
+//            while((recievedMessageTc = bufferedReaderTc.readLine())!=null){
+//                stringBufferTc.append(recievedMessageTc);
+//            }
+//
+//            String theme = stringBufferTc.toString();
+//
+//            if(theme.equals("light")){
+//                lightSwitch.setChecked(true);
+//                temp = "light";
+//
+//                try {
+//                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+//                    fileOutputStream.write(temp.getBytes());
+//                    fileOutputStream.close();
+//                }
+//                catch (Exception e) {
+//                    Log.i("Error ", e.getMessage());
+//                }
+//            }
+//
+//            if(theme.equals("dark")){
+//                darkSwitch.setChecked(true);
+//                temp = "dark";
+//
+//                try {
+//                    FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+//                    fileOutputStream.write(temp.getBytes());
+//                    fileOutputStream.close();
+//                }
+//                catch (Exception e) {
+//                    Log.i("Error ", e.getMessage());
+//                }
+//            }
+//
+//        }
+//        catch (Exception e) {
+//            Log.i("Error ", e.getMessage());
+//        }
 
         changeLangBtn = views.findViewById(R.id.changeLangBtnId);
         changeLangBtn.setOnClickListener(this);
 
         themeText = views.findViewById(R.id.theme_setting);
-        darkText = views.findViewById(R.id.darkId);
-        lightText = views.findViewById(R.id.lightId);
+//        darkText = views.findViewById(R.id.darkId);
+//        lightText = views.findViewById(R.id.lightId);
 
         checkLangTheme();
-        checkTheme();
+//        checkTheme();
 
         return views;
     }
@@ -165,17 +165,17 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
         try {
             if(lang.equals("en")){
                 changeLangBtn.setText(" Change Language");
-                themeText.setText("App Theme");
-                darkText.setText("Default Mode");
-                lightText.setText("Light Mode");
+                themeText.setText("App Language");
+//                darkText.setText("Default Mode");
+//                lightText.setText("Light Mode");
                 ((MainActivity) getActivity()).toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
                 setNavigationItemsName();
 
             } else if(lang.equals("bn")){
                 changeLangBtn.setText(" ভাষা পরিবর্তন করুন");
-                themeText.setText("থিম পরিবর্তন করুন");
-                darkText.setText("ডিফল্ট মোড");
-                lightText.setText("লাইট মোড");
+                themeText.setText("ভাষা");
+//                darkText.setText("ডিফল্ট মোড");
+//                lightText.setText("লাইট মোড");
                 ((MainActivity) getActivity()).toolBarText.setText(getResources().getText(R.string.menu_travel_setting));
                 setNavigationItemsName();
             }
@@ -210,72 +210,72 @@ public class SettingFragment extends Fragment implements View.OnClickListener{
         }
     }
 
-    private void checkTheme(){
-        lightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(lightSwitch.isChecked()) {
-                    darkSwitch.setChecked(false);
-
-                    if(temp.equals("light")){
-                        Log.i("Theme ", "Light");
-
-                    } else if(temp.equals("dark")){
-                        temp = "light";
-
-                        try {
-                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
-                            fileOutputStream.write(temp.getBytes());
-                            fileOutputStream.close();
-
-                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-                            getActivity().finish();
-                            Intent intent = new Intent(getActivity(), MainActivity.class);
-                            intent.putExtra("Theme_EXTRA", "openMainActivity");
-                            startActivity(intent);
-                        }
-                        catch (Exception e) {
-                            Log.i("Error ", e.getMessage());
-                        }
-                    }
-
-                }
-            }
-        });
-
-        darkSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(darkSwitch.isChecked()) {
-                    lightSwitch.setChecked(false);
-
-                    if(temp.equals("dark")){
-                        Log.i("Theme ", "Dark");
-
-                    } else if(temp.equals("light")){
-                        temp = "dark";
-
-                        try {
-                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
-                            fileOutputStream.write(temp.getBytes());
-                            fileOutputStream.close();
-
-                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
-                            getActivity().finish();
-                            Intent intent = new Intent(getActivity(), MainActivity.class);
-                            intent.putExtra("Theme_EXTRA", "openMainActivity");
-                            startActivity(intent);
-                        }
-                        catch (Exception e) {
-                            Log.i("Error ", e.getMessage());
-                        }
-                    }
-                }
-            }
-        });
-    }
+//    private void checkTheme(){
+//        lightSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(lightSwitch.isChecked()) {
+//                    darkSwitch.setChecked(false);
+//
+//                    if(temp.equals("light")){
+//                        Log.i("Theme ", "Light");
+//
+//                    } else if(temp.equals("dark")){
+//                        temp = "light";
+//
+//                        try {
+//                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+//                            fileOutputStream.write(temp.getBytes());
+//                            fileOutputStream.close();
+//
+//                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//
+//                            getActivity().finish();
+//                            Intent intent = new Intent(getActivity(), MainActivity.class);
+//                            intent.putExtra("Theme_EXTRA", "openMainActivity");
+//                            startActivity(intent);
+//                        }
+//                        catch (Exception e) {
+//                            Log.i("Error ", e.getMessage());
+//                        }
+//                    }
+//
+//                }
+//            }
+//        });
+//
+//        darkSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+//            @Override
+//            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+//                if(darkSwitch.isChecked()) {
+//                    lightSwitch.setChecked(false);
+//
+//                    if(temp.equals("dark")){
+//                        Log.i("Theme ", "Dark");
+//
+//                    } else if(temp.equals("light")){
+//                        temp = "dark";
+//
+//                        try {
+//                            FileOutputStream fileOutputStream = getActivity().openFileOutput("Setting_Theme.txt", Context.MODE_PRIVATE);
+//                            fileOutputStream.write(temp.getBytes());
+//                            fileOutputStream.close();
+//
+//                            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+//
+//                            getActivity().finish();
+//                            Intent intent = new Intent(getActivity(), MainActivity.class);
+//                            intent.putExtra("Theme_EXTRA", "openMainActivity");
+//                            startActivity(intent);
+//                        }
+//                        catch (Exception e) {
+//                            Log.i("Error ", e.getMessage());
+//                        }
+//                    }
+//                }
+//            }
+//        });
+//    }
 
     private void setNavigationItemsName(){
         Menu menu = ((MainActivity) getActivity()).navigationView.getMenu();

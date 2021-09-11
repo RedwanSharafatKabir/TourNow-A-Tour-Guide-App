@@ -29,71 +29,71 @@
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <LinearLayout
-                android:id="@+id/upperLayoutId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/text_setting"
-                android:weightSum="10"
-                android:padding="20dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/upperLayoutId"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@+id/text_setting"-->
+<!--                android:weightSum="10"-->
+<!--                android:padding="20dp">-->
 
-                <TextView
-                    android:id="@+id/darkId"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:text="@string/text_dark"
-                    android:textSize="20sp"
-                    android:textColor="#000"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="left"
-                    android:layout_gravity="center"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/darkId"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:text="@string/text_dark"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:fontFamily="serif-monospace"-->
+<!--                    android:gravity="left"-->
+<!--                    android:layout_gravity="center"/>-->
 
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:id="@+id/darkSwitchId"/>
+<!--                <Switch-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:id="@+id/darkSwitchId"/>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:id="@+id/lowerLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_below="@+id/upperLayoutId"
-                android:weightSum="10"
-                android:padding="20dp">
+<!--            <LinearLayout-->
+<!--                android:id="@+id/lowerLayout"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:layout_below="@+id/upperLayoutId"-->
+<!--                android:weightSum="10"-->
+<!--                android:padding="20dp">-->
 
-                <TextView
-                    android:id="@+id/lightId"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:text="@string/text_light"
-                    android:textSize="20sp"
-                    android:textColor="#000"
-                    android:fontFamily="serif-monospace"
-                    android:gravity="left"
-                    android:layout_gravity="center"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/lightId"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:text="@string/text_light"-->
+<!--                    android:textSize="20sp"-->
+<!--                    android:textColor="#000"-->
+<!--                    android:fontFamily="serif-monospace"-->
+<!--                    android:gravity="left"-->
+<!--                    android:layout_gravity="center"/>-->
 
-                <Switch
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:id="@+id/lightSwitchId"/>
+<!--                <Switch-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="5"-->
+<!--                    android:id="@+id/lightSwitchId"/>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="#000"
-                android:id="@+id/lowerLayout2"
-                android:layout_below="@+id/lowerLayout"
-                android:layout_margin="20dp"/>
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#000"-->
+<!--                android:id="@+id/lowerLayout2"-->
+<!--                android:layout_below="@+id/lowerLayout"-->
+<!--                android:layout_margin="20dp"/>-->
 
             <TextView
                 android:id="@+id/changeLangBtnId"

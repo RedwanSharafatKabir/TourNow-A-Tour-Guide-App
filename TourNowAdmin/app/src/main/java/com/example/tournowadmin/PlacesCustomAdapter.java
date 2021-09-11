@@ -57,10 +57,25 @@ public class PlacesCustomAdapter extends RecyclerView.Adapter<PlacesCustomAdapte
         holder.textView1.setText(placeName);
         holder.textView2.setText("Division: " + division);
         holder.textView3.setText("Place Type: " + placeType);
-        holder.textView4.setText("Descrption: " + description);
-        holder.textView5.setText("Tour Guide: " + guideInfo);
         holder.textView6.setText("District: " + district);
         Picasso.get().load(imageUrl).into(holder.placeImage);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(context, ParticularPlaceActivity.class);
+                it.putExtra("placeName_key", placeName);
+                it.putExtra("division_key", division);
+                it.putExtra("placeType_key", placeType);
+                it.putExtra("description_key", description);
+                it.putExtra("guideInfo_key", guideInfo);
+                it.putExtra("imageUrl_key", imageUrl);
+                it.putExtra("district_key", district);
+                context.startActivity(it);
+
+                Log.i("Open_particular_place_page ", "Why man why");
+            }
+        });
 
         holder.edit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -146,7 +161,7 @@ public class PlacesCustomAdapter extends RecyclerView.Adapter<PlacesCustomAdapte
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView textView1, textView2, textView3, textView4, textView5, textView6, delete, edit;
+        TextView textView1, textView2, textView3, textView6, delete, edit;
         ImageView placeImage;
 
         public MyViewHolder(@NonNull View itemView){
@@ -159,8 +174,6 @@ public class PlacesCustomAdapter extends RecyclerView.Adapter<PlacesCustomAdapte
             textView1 = itemView.findViewById(R.id.placeNameId);
             textView2 = itemView.findViewById(R.id.divisionId);
             textView3 = itemView.findViewById(R.id.placeTypeId);
-            textView4 = itemView.findViewById(R.id.placeDetailsId);
-            textView5 = itemView.findViewById(R.id.placeGuideId);
             textView6 = itemView.findViewById(R.id.districtId);
 
             databaseReference = FirebaseDatabase.getInstance().getReference("Travel Places");

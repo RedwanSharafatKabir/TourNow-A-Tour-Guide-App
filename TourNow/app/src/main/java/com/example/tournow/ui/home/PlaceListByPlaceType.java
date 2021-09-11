@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tournow.MainActivity;
@@ -47,6 +48,7 @@ public class PlaceListByPlaceType extends AppCompatActivity implements View.OnCl
     NetworkInfo netInfo;
     String message;
     ImageView backPage;
+    TextView typeName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,31 +72,69 @@ public class PlaceListByPlaceType extends AppCompatActivity implements View.OnCl
         storePlaceDataArrayList = new ArrayList<StorePlaceData>();
         databaseReference = FirebaseDatabase.getInstance().getReference("Travel Places");
 
+        typeName = findViewById(R.id.typeNameId);
+
         Intent it = getIntent();
         message = it.getStringExtra("place_key");
 
         if(message.equals("Park")){
-            showParks();
+            typeName.setText(getResources().getText(R.string.travel_binodon));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showParks();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         if(message.equals("Forest")){
-            showForest();
+            typeName.setText(getResources().getText(R.string.travel_bonanchol));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showForest();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         if(message.equals("Hill")){
-            showHills();
+            typeName.setText(getResources().getText(R.string.travel_pahar));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showHills();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         if(message.equals("River")){
-            showRivers();
+            typeName.setText(getResources().getText(R.string.travel_somudro));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showRivers();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         if(message.equals("Museum")){
-            showMuseum();
+            typeName.setText(getResources().getText(R.string.travel_oitihasik));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showMuseum();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         if(message.equals("History")){
-            showHistory();
+            typeName.setText(getResources().getText(R.string.travel_jadughor));
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                showHistory();
+            } else {
+                Toast.makeText(PlaceListByPlaceType.this, "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
+            }
         }
 
         backPage = findViewById(R.id.backPageId1);

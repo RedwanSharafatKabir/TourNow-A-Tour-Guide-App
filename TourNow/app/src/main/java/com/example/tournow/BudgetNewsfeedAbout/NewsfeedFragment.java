@@ -1,6 +1,9 @@
 package com.example.tournow.BudgetNewsfeedAbout;
 
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -28,6 +31,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tournow.ModelClasses.StorePostInfo;
 import com.example.tournow.R;
 import com.example.tournow.RecyclerViewAdapters.NewsfeedCustomAdapter;
+import com.example.tournow.ui.home.DistrictListActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -61,11 +65,16 @@ public class NewsfeedFragment extends Fragment implements View.OnClickListener{
     ImageView uploadImage, uploadVideo;
     ProgressDialog dialog;
     StorageReference storageReference;
+    ConnectivityManager cm;
+    NetworkInfo netInfo;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         views = inflater.inflate(R.layout.fragment_newsfeed, container, false);
+
+        cm = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        netInfo = cm.getActiveNetworkInfo();
 
         dialog = new ProgressDialog(getActivity());
         userPhone = FirebaseAuth.getInstance().getCurrentUser().getDisplayName();
@@ -94,7 +103,12 @@ public class NewsfeedFragment extends Fragment implements View.OnClickListener{
         storePostInfoArrayList = new ArrayList<StorePostInfo>();
         databaseReference = FirebaseDatabase.getInstance().getReference("Post Info");
 
-        showPostdata();
+        if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+            showPostdata();
+        } else {
+            Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+            progressBar.setVisibility(View.GONE);
+        }
 
         return views;
     }
@@ -118,30 +132,46 @@ public class NewsfeedFragment extends Fragment implements View.OnClickListener{
             }
 
             else {
-                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Visitor").child(userPhone).child("name");
+                if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Visitor").child(userPhone).child("name");
 
-                ref.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        postOwner = snapshot.getValue().toString();
-                        storePostData(postText, postOwner, "No_Image", "No_Video");
-                        writePost.setText("");
-                    }
+                    ref.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            postOwner = snapshot.getValue().toString();
+                            storePostData(postText, postOwner, "No_Image", "No_Video");
+                            writePost.setText("");
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {}
-                });
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            progressBar.setVisibility(View.GONE);
+                        }
+                    });
+
+                } else {
+                    Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                }
             }
 
         }
 
         if(v.getId()==R.id.uploadVideoId){
             // Upload video from gallery
-            someActivityResultLauncher.launch("image/*");
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                someActivityResultLauncher.launch("image/*");
+            } else {
+                Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+            }
         }
 
         if(v.getId()==R.id.uploadImageId){
-            someActivityResultLauncher.launch("image/*");
+            if (netInfo != null && netInfo.isConnectedOrConnecting()) {
+                someActivityResultLauncher.launch("image/*");
+            } else {
+                Toast.makeText(getActivity(), "Turn on internet connection", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 

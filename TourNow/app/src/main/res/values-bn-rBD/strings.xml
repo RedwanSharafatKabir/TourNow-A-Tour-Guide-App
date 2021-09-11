@@ -50,7 +50,7 @@
     <string name="text_reset">রিসেট</string>
     <string name="text_email_old"> পুরাতন ইমেইল দিন</string>
     <string name="text_email_new"> নতুন ইমেইল দিন</string>
-    <string name="text_setting">থিম পরিবর্তন করুন</string>
+    <string name="text_setting">ভাষা</string>
     <string name="text_dark">ডিফল্ট মোড</string>
     <string name="text_light">লাইট মোড</string>
     <string name="text_english">English</string>
@@ -76,6 +76,8 @@
     <string name="transport_text"> যানবাহন</string>
     <string name="hotel_text"> হোটেল</string>
     <string name="total_days"> মোট কতদিন</string>
+    <string name="enter_place"> জেলা অনুসারে স্থান খুঁজুন</string>
+    <string name="search_place"> খুঁজুন</string>
 
     <string-array name="division_array">
         <item>বিভাগ</item>
